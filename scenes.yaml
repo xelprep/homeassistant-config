@@ -1,0 +1,710 @@
+- name: Nighttime
+  entities:
+    light.bedroom_1_ceiling:
+      state: on
+      transition: 2
+      rgb_color: [55, 0, 8]
+      brightness: 55
+    light.bedroom_1_lamp:
+      state: off
+    light.studio_front:
+      state: off
+    light.studio_rear:
+      state: off
+    light.studio_light_1:
+      state: off
+    light.bedroom_3_ceiling:
+      state: on
+      transition: 2
+      rgb_color: [0, 160, 149]
+      brightness: 70
+    light.bedroom_3_accent:
+      state: on
+      transition: 2
+      rgb_color: [255, 42, 28]
+      brightness: 157
+    switch.bedroom_3_fan:
+      state: on
+    light.game_room_ceiling:
+      state: off
+    light.game_room_lamp:
+      state: off
+    light.front_hall_light:
+      state: on
+      brightness: 2
+    light.middle_hall_light:
+      state: off
+    light.back_hall_light:
+      state: off
+    light.kitchen_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 312
+      brightness: 2
+    light.kitchen_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 312
+      brightness: 2
+    light.kitchen_downlight_3:
+      state: off
+    light.kitchen_downlight_4:
+      state: off
+    light.kitchen_overhead_lamp:
+      state: off
+    light.living_room_downlight_1:
+      state: off
+    light.living_room_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 312
+      brightness: 2
+    light.living_room_downlight_3:
+      state: off
+    light.living_room_downlight_4:
+      state: off
+    light.living_room_downlight_5:
+      state: off
+    light.living_room_downlight_6:
+      state: off
+    light.living_room_lamp:
+      state: off
+    switch.0120004868c63a843a03:
+      state: off
+- name: Game Room Purple Diesel
+  entities:
+    light.game_room_ceiling:
+      state: on
+      transition: 2
+      rgb_color: [120, 0, 180]
+      brightness: 180
+    light.game_room_lamp:
+      state: on
+      transition: 2
+      rgb_color: [120, 0, 180]
+      brightness: 180
+- name: Chill
+  entities:
+    light.game_room_ceiling:
+      state: on
+      transition: 2
+      rgb_color: [104, 0, 142]
+      brightness: 143
+    light.game_room_lamp:
+      state: on
+      transition: 2
+      rgb_color: [19, 0, 250]
+      brightness: 250
+- name: Half Chill
+  entities:
+    light.game_room_ceiling:
+      state: on
+      transition: 2
+      rgb_color: [123, 110, 84]
+      brightness: 123
+    light.game_room_lamp:
+      state: on
+      transition: 2
+      rgb_color: [163, 207, 255]
+      brightness: 255
+- name: No Chill
+  entities:
+    light.game_room_ceiling:
+      state: on
+      transition: 2
+      rgb_color: [255, 255, 255]
+      brightness: 255
+    light.game_room_lamp:
+      state: on
+      transition: 2
+      rgb_color: [255, 255, 255]
+      brightness: 255
+- name: Cleaning
+  entities:
+    light.back_hall_light:
+      state: on
+      brightness: 254
+      transition: 2
+    light.front_hall_light:
+      state: on
+      brightness: 254
+      transition: 2
+    light.middle_hall_light:
+      state: on
+      brightness: 254
+      transition: 2
+    light.bedroom_1_ceiling:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.bedroom_1_lamp:
+      state: on
+      transition: 2
+      brightness: 255
+    light.studio_front:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.studio_rear:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.studio_light_1:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.bedroom_3_ceiling:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.bedroom_3_accent:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.game_room_ceiling:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.game_room_lamp:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.kitchen_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.kitchen_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.kitchen_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.kitchen_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.kitchen_overhead_lamp:
+      state: on
+      transition: 2
+      brightness: 255
+    light.living_room_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.living_room_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.living_room_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.living_room_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.living_room_downlight_5:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.living_room_downlight_6:
+      state: on
+      transition: 2
+      color_temp: 250
+      brightness: 255
+    light.living_room_lamp:
+      state: on
+      transition: 2
+      brightness: 255
+- name: Daytime
+  entities:
+    light.back_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.front_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.middle_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.studio_front:
+      state: on
+      transition: 2
+      color_temp: 328
+      brightness: 255
+    light.studio_rear:
+      state: on
+      transition: 2
+      color_temp: 328
+      brightness: 255
+    light.studio_light_1:
+      state: on
+      transition: 2
+      color_temp: 328
+      brightness: 255
+    light.bedroom_3_ceiling:
+      state: off
+    light.bedroom_3_accent:
+      state: off
+    light.game_room_ceiling:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 80
+    light.game_room_lamp:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 80
+    light.kitchen_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.kitchen_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.kitchen_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.kitchen_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.kitchen_overhead_lamp:
+      state: on
+      transition: 2
+      brightness: 255
+    light.living_room_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.living_room_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.living_room_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.living_room_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.living_room_downlight_5:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.living_room_downlight_6:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.living_room_lamp:
+      state: off
+      transition: 2
+- name: Evening
+  entities:
+    light.back_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.front_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.middle_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.kitchen_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 190
+    light.kitchen_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 190
+    light.kitchen_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.kitchen_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 190
+    light.kitchen_overhead_lamp:
+      state: on
+      transition: 2
+      brightness: 180
+    light.living_room_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_5:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_6:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_lamp:
+      state: on
+      transition: 2
+      brightness: 20
+- name: Entertaining At Night
+  entities:
+    light.studio_front:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 100
+    light.studio_rear:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 100
+    light.studio_light_1:
+      state: off
+    light.back_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.front_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.middle_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.kitchen_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 255
+    light.kitchen_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 190
+    light.kitchen_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.kitchen_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 190
+    light.kitchen_overhead_lamp:
+      state: on
+      transition: 2
+      brightness: 255
+    light.living_room_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_5:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_downlight_6:
+      state: on
+      transition: 2
+      color_temp: 369
+      brightness: 20
+    light.living_room_lamp:
+      state: on
+      transition: 2
+      brightness: 20
+    switch.0120004868c63a843a03:
+      state: on
+- name: Working At Night
+  entities:
+    light.back_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.front_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.middle_hall_light:
+      state: on
+      brightness: 2
+      transition: 2
+    light.kitchen_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.kitchen_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.kitchen_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.kitchen_overhead_lamp:
+      state: on
+      transition: 2
+      brightness: 255
+    light.kitchen_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.living_room_downlight_1:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.living_room_downlight_2:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.living_room_downlight_3:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.living_room_downlight_4:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.living_room_downlight_5:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.living_room_downlight_6:
+      state: on
+      transition: 2
+      color_temp: 354
+      brightness: 198
+    light.living_room_lamp:
+      state: on
+      transition: 2
+      brightness: 198
+- name: Morning Light
+  entities:
+    light.bedroom_1_ceiling:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 100
+    light.bedroom_1_lamp:
+      state: on
+      transition: 3600
+      brightness: 100
+    light.studio_front:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 100
+    light.studio_rear:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 100
+    light.studio_light_1:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.bedroom_3_ceiling:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 255
+    light.bedroom_3_accent:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 255
+    light.game_room_ceiling:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 100
+    light.game_room_lamp:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 100
+    light.kitchen_downlight_1:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.kitchen_downlight_2:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.kitchen_downlight_3:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.kitchen_downlight_4:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.kitchen_overhead_lamp:
+      state: on
+      transition: 3600
+      brightness: 255
+    light.living_room_downlight_1:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.living_room_downlight_2:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.living_room_downlight_3:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.living_room_downlight_4:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.living_room_downlight_5:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.living_room_downlight_6:
+      state: on
+      transition: 3600
+      color_temp: 236
+      brightness: 125
+    light.living_room_lamp:
+      state: on
+      transition: 3600
+      brightness: 125
+- name: Room 1
+  entities:
+    light.bedroom_1_ceiling:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.bedroom_1_lamp:
+      state: on
+      transition: 2
+      brightness: 255
+- name: Room 2
+  entities:
+    light.studio_front:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.studio_rear:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.studio_light_1:
+      state: on
+      color_temp: 294
+      brightness: 255
+- name: Room 3
+  entities:
+    light.bedroom_3_ceiling:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.bedroom_3_accent:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255

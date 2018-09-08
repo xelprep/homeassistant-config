@@ -1,0 +1,57 @@
+# Groups
+group.all_automations:
+  friendly_name: Automations
+  hidden: false
+  emulated_hue_hidden: true
+group.all_covers:
+  friendly_name: Covers
+  hidden: false
+  emulated_hue_hidden: true
+group.all_devices:
+  friendly_name: Tracked Devices
+  hidden: false
+  emulated_hue_hidden: true
+group.all_lights:
+  friendly_name: All Lights
+  hidden: false
+  emulated_hue_hidden: true
+group.all_locks:
+  friendly_name: Locks
+  hidden: false
+  emulated_hue_hidden: true
+group.all_remotes:
+  friendly_name: Remotes
+  hidden: false
+  emulated_hue_hidden: true
+group.all_scripts:
+  friendly_name: Scripts
+  hidden: false
+  emulated_hue_hidden: true
+group.all_switches:
+  friendly_name: Switches
+  hidden: false
+  emulated_hue_hidden: true
+group.default_view:
+  emulated_hue_hidden: true
+group.everything_else:
+  emulated_hue_hidden: true
+group.garage_door:
+  emulated_hue_hidden: true
+group.sonos:
+  emulated_hue_hidden: true
+
+# Sensors
+sensor.wink_relay_sensor_temperature:
+  friendly_name: Indoor Temperature
+
+# Switches
+switch.0120004868c63a843a03:
+  friendly_name: Kitchen Party Light
+
+# Scenes
+scene.game_room_purple_diesel:
+  emulated_hue_hidden: true
+scene.morning_light:
+  emulated_hue_hidden: true
+scene.quick_nighttime:
+  emulated_hue_hidden: true

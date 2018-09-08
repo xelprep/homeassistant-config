@@ -1,0 +1,14 @@
+abodepy_cache.pickle
+home-assistant.log
+home-assistant_v2.db
+.ios.conf
+*DS_Store
+nest.conf
+phue.conf
+plex.conf*
+.ring_cache.pickle
+secrets.yaml
+.storage
+tts
+.uuid
+.wink.conf

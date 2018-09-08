@@ -1,0 +1,327 @@
+homeassistant:
+  name: BBH
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 32
+  unit_system: imperial
+  time_zone: America/Los_Angeles
+  customize: !include customize.yaml
+  auth_providers:
+   - type: homeassistant
+
+# Enable the frontend
+frontend:
+  javascript_version: latest
+  themes: !include_dir_merge_named themes
+
+# Enable map
+map:
+
+# Enable configuration UI
+config:
+
+# Enable MQTT
+mqtt:
+  broker: !secret mqtt_broker
+
+# Enable support for tracking state changes over time.
+recorder:
+  purge_interval: 1
+  purge_keep_days: 7
+
+# API password
+http:
+  api_password: !secret api_password
+
+# Enable api
+api:
+
+# Check for available updates
+updater:
+  include_used_components: true
+
+# Discover some devices automatically
+discovery:
+  ignore:
+    - apple_tv
+    - plex_mediaserver
+    - roku
+
+# Enable voice commands from the frontend in enabled browsers
+conversation:
+
+# Enable support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Enable ffmpeg for camera stuff
+ffmpeg:
+  ffmpeg_bin: /usr/bin/ffmpeg
+
+# Enable Cameras
+camera:
+  - platform: ffmpeg
+    input: !secret garage_camera_url
+    name: Garage Camera
+  - platform: yi
+    name: Living Room Camera
+    host: !secret living_room_camera_host
+    password: !secret living_room_camera_pass
+
+# Enable Garage Door tracking
+cover:
+  - platform: myq
+    username: !secret myq_username
+    password: !secret myq_pass
+    type: chamberlain
+
+# Enable Nest
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+  sensors:
+    monitored_conditions:
+      - 'co_status'
+      - 'smoke_status'
+      - 'battery_health'
+  binary_sensors:
+    monitored_conditions:
+      - 'online'
+
+# Enable Sensors
+sensor:
+  - platform: yr
+  - platform: ring
+    monitored_conditions:
+      - battery
+      - last_activity
+      - last_ding
+      - last_motion
+      - volume
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+  - platform: mqtt_room
+    device_id: !secret pax_device_id
+    name: 'PAX3'
+    state_topic: 'room_presence'
+    timeout: 15
+    away_timeout: 15
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: memory_use_percent
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
+      - type: ipv4_address
+        arg: eth0
+      - type: ipv6_address
+        arg: eth0
+      - type: since_last_boot
+  - platform: template
+    sensors:
+      billy_battery:
+        friendly_name: Billy's Phone Battery
+        unit_of_measurement: "%"
+        value_template: '{{ states.device_tracker.billy_phone.attributes.battery|int }}'
+        device_class: battery
+      emily_battery:
+        friendly_name: Emily's Phone Battery
+        unit_of_measurement: "%"
+        value_template: '{{ states.device_tracker.emily_phone.attributes.battery|int }}'
+        device_class: battery
+
+# Enable Ring Doorbell
+ring:
+  username: !secret ring_username
+  password: !secret ring_password
+
+# Enable text to speech
+tts:
+  platform: google
+
+# Enable Abode
+abode:
+  username: !secret abode_username
+  password: !secret abode_password
+
+# Enable email alerts
+notify:
+  - name: email_alerts
+    platform: smtp
+    server: smtp.gmail.com
+    port: 587
+    timeout: 15
+    sender: !secret alert_email_address
+    encryption: starttls
+    username: !secret alert_email_username
+    password: !secret alert_email_password
+    recipient:
+      - !secret alert_recipient
+    sender_name: Home Assistant
+
+# Enable Tuya
+tuya:
+  username: !secret tuya_username
+  password: !secret tuya_password
+  country_code: 1
+
+# Enable Apple TVs
+apple_tv:
+  - host: !secret apple_tv_1
+    name: Living Room Apple TV
+    login_id: !secret apple_tv_id
+  - host: !secret apple_tv_2
+    name: Bedroom Apple TV
+    login_id: !secret apple_tv_id
+  - host: !secret apple_tv_3
+    name: Game Room Apple TV
+    login_id: !secret apple_tv_id
+  - host: !secret apple_tv_4
+    name: Studio Apple TV
+    login_id: !secret apple_tv_id
+
+# Enable Sonos
+sonos:
+  media_player:
+    hosts:
+      - !secret sonos1
+      - !secret sonos2
+      - !secret sonos3
+
+# Enable Emulated Hue Bridge
+emulated_hue:
+  expose_by_default: true
+  type: alexa
+  off_maps_to_on_domains:
+  exposed_domains:
+    - group
+    - scene
+    - script
+    - input_boolean
+    - switch
+
+# Enable Google Assistant Integration
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  client_id: !secret google_assistant_client_id
+  access_token: !secret google_assistant_access_token
+  agent_user_id: !secret google_assistant_user_id
+  api_key: !secret google_assistant_api_key
+  exposed_domains:
+    - script
+    - scene
+    - group
+    - input_boolean
+    - switch
+  entity_config:
+    group.all_automations:
+      expose: false
+    group.all_covers:
+      expose: false
+    group.all_devices:
+      expose: false
+    group.all_lights:
+      expose: false
+    group.all_locks:
+      expose: false
+    group.all_remotes:
+      expose: false
+    group.all_scripts:
+      expose: false
+    group.all_switches:
+      expose: false
+    group.default_view:
+      expose: false
+    group.everything_else:
+      expose: false
+    group.garage_door:
+      expose: false
+    group.sonos:
+      expose: false
+    group.cameras:
+      expose: false
+    scene.game_room_purple_diesel:
+      expose: false
+    scene.morning_light:
+      expose: false
+    scene.quick_nighttime:
+      expose: false
+
+
+# Enable IFTTT
+ifttt:
+  key: !secret ifttt_key
+
+# Enable Lights
+light:
+  - platform: lifx
+
+# Enable Hue
+hue:
+  bridges:
+    - host: !secret hue_bridge
+
+# Enable Wink
+wink:
+  local_control: true
+
+# Enable Device Tracking
+device_tracker:
+  - platform: owntracks_http
+  - platform: ping
+    count: 3
+    hosts:
+      pihole: !secret pihole_ip
+      website: !secret website_ip
+      unifi: !secret unifi_ip
+      mqtt: !secret mqtt_ip
+      primarynas: !secret primarynas_ip
+      backupnas: !secret backupnas_ip
+      studioprinter: !secret studioprinter_ip
+      sonosamp: !secret sonosamp_ip
+      sonosplay5: !secret sonosplay5_ip
+      sonosone: !secret sonosone_ip
+      rearap: !secret rearap_ip
+      frontap: !secret frontap_ip
+      studioap: !secret studioap_ip
+      huehub: !secret huehub_ip
+      livingroomappletv: !secret livingroomappletv_ip
+      bedroomappletv: !secret bedroomappletv_ip
+      gameroomappletv: !secret gameroomappletv_ip
+      studioappletv: !secret studioappletv_ip
+      winserver: !secret winserver_ip
+      winkrelay: !secret winkrelay_ip
+      winkhub: !secret winkhub_ip
+      garagecam: !secret garagecam_ip
+      livingroomcam: !secret livingroomcam_ip
+      lifx1: !secret lifx1_ip
+      lifx2: !secret lifx2_ip
+      lifx3: !secret lifx3_ip
+      lifx4: !secret lifx4_ip
+      lifx5: !secret lifx5_ip
+      lifx6: !secret lifx6_ip
+
+# Define Scenes
+scene: !include scenes.yaml
+
+# Define Scripts
+script: !include scripts.yaml
+
+# Define Groups
+group: !include groups.yaml
+
+# Define Automations
+automation: !include automations.yaml

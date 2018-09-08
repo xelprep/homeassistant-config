@@ -1,0 +1,53 @@
+purple_diesel:
+  alias: "Purple Diesel"
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: script.purple_diesel
+    - service: homeassistant.turn_on
+      entity_id: scene.game_room_purple_diesel
+    - service: media_player.sonos_unjoin
+      entity_id:
+        - media_player.back_room
+    - service: media_player.volume_set
+      entity_id:
+        - media_player.back_room
+      data:
+        volume_level: 0.5
+    - service: media_player.select_source
+      data:
+        entity_id:
+          - media_player.back_room
+        source: 'Run The Jewels Radio'
+    - service: media_player.media_play
+      entity_id:
+        - media_player.back_room
+hipster_rollerdisco:
+  alias: 'Hipster Rollerdisco'
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: script.hipster_rollerdisco
+    - service: media_player.sonos_unjoin
+      entity_id:
+        - media_player.back_room
+    - service: media_player.volume_set
+      entity_id:
+        - media_player.back_room
+      data:
+        volume_level: 0.5
+    - service: media_player.select_source
+      data:
+        entity_id:
+          - media_player.back_room
+        source: 'Ssion Radio'
+    - service: media_player.media_play
+      entity_id:
+        - media_player.back_room
+    - service: light.lifx_effect_colorloop
+      data:
+        entity_id:
+          - light.game_room_ceiling
+          - light.game_room_lamp
+        brightness: 100
+        period: 10
+        spread: 100
+        change: 100

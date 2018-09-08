@@ -1,0 +1,129 @@
+- id: m0rninglight
+  alias: Turn On Morning light
+  trigger:
+    platform: time
+    at: 07:30:00
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.morning_light
+- id: sund0wn
+  alias: Sundown Patio
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -01:00:00
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.rear_patio_lights
+- id: sunup
+  alias: Sunup Patio
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: +00:30:00
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.rear_patio_lights
+- id: sm0ketime
+  alias: PAX DETECTED
+  trigger:
+  - entity_id: sensor.pax3
+    from: not_home
+    platform: state
+    to: game_room
+  action:
+  - data:
+      brightness: 255
+      color_name: green
+      entity_id: light.game_room_lamp, light.game_room_ceiling
+      mode: breathe
+      period: 10
+      cycles: 3
+      power_on: false
+    service: light.lifx_effect_pulse
+- id: device0ffline
+  alias: Tracked Device Offline Notification
+  trigger:
+    platform: state
+    entity_id: device_tracker.backupnas,
+      device_tracker.frontap, device_tracker.winkrelay,
+      device_tracker.huehub, device_tracker.winkhub, device_tracker.garagecam,
+      device_tracker.lifx1, device_tracker.lifx2, device_tracker.lifx3, device_tracker.lifx4,
+      device_tracker.lifx5, device_tracker.lifx6, device_tracker.sonosone,
+      device_tracker.pihole, device_tracker.primarynas, device_tracker.livingroomcam,
+      device_tracker.rearap, device_tracker.sonosamp, device_tracker.sonosplay5,
+      device_tracker.studioap, device_tracker.studioprinter,
+      device_tracker.unifi, device_tracker.website, device_tracker.winserver
+    from: home
+    to: not_home
+  action:
+    service: notify.email_alerts
+    data_template:
+      message:  >
+        {{ trigger.to_state.attributes.friendly_name }} has gone offline.
+      title: "[ALERT] {{ trigger.to_state.attributes.friendly_name }} Offline"
+- id: device0nline
+  alias: Tracked Device Online Notification
+  trigger:
+    platform: state
+    entity_id: device_tracker.backupnas,
+      device_tracker.frontap, device_tracker.winkrelay,
+      device_tracker.huehub, device_tracker.winkhub, device_tracker.garagecam,
+      device_tracker.lifx1, device_tracker.lifx2, device_tracker.lifx3, device_tracker.lifx4,
+      device_tracker.lifx5, device_tracker.lifx6, device_tracker.sonosone,
+      device_tracker.pihole, device_tracker.primarynas, device_tracker.livingroomcam,
+      device_tracker.rearap, device_tracker.sonosamp, device_tracker.sonosplay5,
+      device_tracker.studioap, device_tracker.studioprinter,
+      device_tracker.unifi, device_tracker.website, device_tracker.winserver
+    from: not_home
+    to: home
+  action:
+    service: notify.email_alerts
+    data_template:
+      message:  >
+        {{ trigger.to_state.attributes.friendly_name }} has come back online.
+      title: "[RESOLVED] {{ trigger.to_state.attributes.friendly_name }} Online"
+# - id: party0n
+#   alias: Kitchen Party Light On
+#   trigger:
+#     platform: state
+#     entity_id: input_boolean.kitchen_party_light
+#     to: 'on'
+#   action:
+#     service: ifttt.trigger
+#     data: {"event":"Kitchen_Party_Light_On", "value1":“on"}
+# - id: party0ff
+#   alias: Kitchen Party Light Off
+#   trigger:
+#     platform: state
+#     entity_id: input_boolean.kitchen_party_light
+#     to: 'off'
+#   action:
+#     service: ifttt.trigger
+#     data: {"event":"Kitchen_Party_Light_Off", "value1":"off"}
+- id: bed3fan0ff
+  alias: Turn Off Bedroom 3 Fan
+  trigger:
+    platform: time
+    at: 07:00:00
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.bedroom_3_fan
+- id: s3tth3m3
+  alias: 'Automation for Theme HA Restart'
+  initial_state: True
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    service: frontend.set_theme
+    data:
+      name: midnight
