@@ -91,24 +91,6 @@
       message:  >
         {{ trigger.to_state.attributes.friendly_name }} has come back online.
       title: "[RESOLVED] {{ trigger.to_state.attributes.friendly_name }} Online"
-# - id: party0n
-#   alias: Kitchen Party Light On
-#   trigger:
-#     platform: state
-#     entity_id: input_boolean.kitchen_party_light
-#     to: 'on'
-#   action:
-#     service: ifttt.trigger
-#     data: {"event":"Kitchen_Party_Light_On", "value1":“on"}
-# - id: party0ff
-#   alias: Kitchen Party Light Off
-#   trigger:
-#     platform: state
-#     entity_id: input_boolean.kitchen_party_light
-#     to: 'off'
-#   action:
-#     service: ifttt.trigger
-#     data: {"event":"Kitchen_Party_Light_Off", "value1":"off"}
 - id: bed3fan0ff
   alias: Turn Off Bedroom 3 Fan
   trigger:
