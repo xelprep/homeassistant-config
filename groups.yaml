@@ -53,7 +53,6 @@ kitchen:
   - light.kitchen_downlight_4
   - light.kitchen_overhead_lamp
   - switch.0120004868c63a843a03
-  # - input_boolean.kitchen_party_light
 
 living_room:
   name: Living Room
