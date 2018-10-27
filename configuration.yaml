@@ -262,10 +262,6 @@ google_assistant:
 ifttt:
   key: !secret ifttt_key
 
-# Enable Lights
-light:
-  - platform: lifx
-
 # Enable Hue
 hue:
   bridges:
