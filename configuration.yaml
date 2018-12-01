@@ -273,7 +273,6 @@ wink:
 
 # Enable Device Tracking
 device_tracker:
-  - platform: owntracks_http
   - platform: ping
     count: 3
     hosts:
