@@ -25,11 +25,11 @@ default_view:
   - scene.room_3
   - scene.working_at_night
   - scene.cleaning
-  - device_tracker.billy_phone
-  - device_tracker.emily_phone
-  - sensor.ring_front_door_battery
+  - device_tracker.billy_billy
+  - device_tracker.emily_d474753a4b8c49678fb9cf671e595ee0
   - sensor.billy_battery
   - sensor.emily_battery
+  - sensor.ring_front_door_battery
   view: true
 
 bedroom_1:
