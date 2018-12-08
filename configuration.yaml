@@ -140,7 +140,7 @@ sensor:
       emily_battery:
         friendly_name: Emily's Phone Battery
         unit_of_measurement: "%"
-        value_template: '{{ states.device_tracker.emily_phone.attributes.battery|int }}'
+        value_template: '{{ states.device_tracker.emily_d474753a4b8c49678fb9cf671e595ee0.attributes.battery|int }}'
         device_class: battery
 
 # Enable Ring Doorbell

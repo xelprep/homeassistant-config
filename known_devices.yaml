@@ -268,14 +268,6 @@ livingroomcam:
   track: true
   vendor:
 
-billy_billy:
-  hide_if_away: false
-  icon: mdi:arrow-up-thick
-  mac:
-  name: Billy's Phone
-  picture:
-  track: true
-
 homeassistant_74d6c30d6b2a49a1a63d500aa728628d:
   hide_if_away: false
   icon:
@@ -289,5 +281,13 @@ emily_d474753a4b8c49678fb9cf671e595ee0:
   icon: mdi:brush
   mac:
   name: Emily's Phone
+  picture:
+  track: true
+
+billy_phone:
+  hide_if_away: false
+  icon: mdi:arrow-up-thick
+  mac:
+  name: Billy's Phone
   picture:
   track: true
