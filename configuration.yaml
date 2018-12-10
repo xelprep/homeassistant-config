@@ -73,6 +73,11 @@ camera:
     host: !secret living_room_camera_host
     password: !secret living_room_camera_pass
 
+# Enable Blink support
+blink:
+  username: !secret blink_username
+  password: !secret blink_password
+
 # Enable Garage Door tracking
 cover:
   - platform: myq
@@ -203,8 +208,8 @@ sonos:
 
 # Enable Emulated Hue Bridge
 emulated_hue:
+  listen_port: 80
   expose_by_default: true
-  type: alexa
   off_maps_to_on_domains:
   exposed_domains:
     - group

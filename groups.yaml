@@ -10,10 +10,15 @@ default_view:
   - group.game_room
   - group.all_switches
   - alarm_control_panel.abode_alarm
+  - binary_sensor.blink_living_room_camera_armed
+  - binary_sensor.blink_living_room_motion_detected
   - binary_sensor.back_door
   - binary_sensor.front_door
   - sensor.wink_relay_sensor_temperature_2
   - sensor.wink_relay_sensor_temperature
+  - sensor.blink_living_room_temperature
+  - sensor.blink_living_room_battery
+  - sensor.blink_living_room_wifi_signal
   - scene.daytime
   - scene.entertaining_at_night
   - scene.evening
@@ -111,6 +116,7 @@ cameras:
   entities:
   - camera.garage_camera
   - camera.living_room_camera
+  - camera.blink_living_room
   - camera.living_room_motion_camera
   view: true
 
@@ -163,6 +169,8 @@ everything_else:
   - binary_sensor.wink_relay_sensor_presence
   - binary_sensor.wink_relays_bottom_button
   - binary_sensor.wink_relays_top_button
+  - binary_sensor.blink_living_room_camera_armed
+  - binary_sensor.blink_living_room_motion_detected
   - sensor.back_hallway_1_nest_protect_battery_health
   - sensor.back_hallway_1_nest_protect_co_status
   - sensor.back_hallway_1_nest_protect_smoke_status
@@ -183,6 +191,9 @@ everything_else:
   - sensor.game_room_nest_protect_battery_health
   - sensor.game_room_nest_protect_co_status
   - sensor.game_room_nest_protect_smoke_status
+  - sensor.blink_living_room_temperature
+  - sensor.blink_living_room_battery
+  - sensor.blink_living_room_wifi_signal
   - sensor.internet_time
   - sensor.pax3
   - sensor.ring_front_door_battery

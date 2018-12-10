@@ -12,3 +12,4 @@ secrets.yaml
 tts
 .uuid
 .wink.conf
+emulated_hue_ids.json
