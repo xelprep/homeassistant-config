@@ -134,7 +134,7 @@ sensor:
         arg: eth0
       - type: ipv6_address
         arg: eth0
-      - type: since_last_boot
+      - type: last_boot
   - platform: template
     sensors:
       billy_battery:
