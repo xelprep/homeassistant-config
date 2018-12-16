@@ -13,3 +13,4 @@ tts
 .uuid
 .wink.conf
 emulated_hue_ids.json
+known_devices.yaml
