@@ -49,6 +49,16 @@
       cycles: 3
       power_on: false
     service: light.lifx_effect_pulse
+- id: b0b
+  alias: Bob is here
+  trigger:
+  - entity_id: device_tracker.bobs_iphone
+    from: not_home
+    platform: state
+    to: home
+  action:
+    service: script.turn_on
+    entity_id: script.bob_is_here
 - id: device0ffline
   alias: Tracked Device Offline Notification
   trigger:
