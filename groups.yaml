@@ -10,15 +10,10 @@ default_view:
   - group.game_room
   - group.all_switches
   - alarm_control_panel.abode_alarm
-  - binary_sensor.blink_living_room_camera_armed
-  - binary_sensor.blink_living_room_motion_detected
   - binary_sensor.back_door
   - binary_sensor.front_door
   - sensor.wink_relay_sensor_temperature_2
   - sensor.wink_relay_sensor_temperature
-  - sensor.blink_living_room_temperature
-  - sensor.blink_living_room_battery
-  - sensor.blink_living_room_wifi_signal
   - scene.daytime
   - scene.entertaining_at_night
   - scene.evening
@@ -36,6 +31,10 @@ default_view:
   - sensor.billy_battery
   - sensor.emily_battery
   - sensor.ring_front_door_battery
+  - sensor.blink_living_room_battery
+  - sensor.blink_backyard_battery
+  - sensor.blink_driveway_battery
+  - sensor.blink_front_door_battery
   view: true
 
 bedroom_1:
@@ -117,6 +116,9 @@ cameras:
   - camera.garage_camera
   - camera.living_room_camera
   - camera.blink_living_room
+  - camera.blink_backyard
+  - camera.blink_front_door
+  - camera.blink_driveway
   - camera.living_room_motion_camera
   view: true
 
