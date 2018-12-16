@@ -36,6 +36,10 @@ http:
 # Enable api
 api:
 
+# Enable Alexa Smart Home
+alexa:
+  smart_home:
+
 # Check for available updates
 updater:
   include_used_components: true
