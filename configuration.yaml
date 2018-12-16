@@ -278,8 +278,15 @@ wink:
 
 # Enable Device Tracking
 device_tracker:
+  - platform: unifi
+    host: !secret unifi_ip
+    username: !secret unifi_username
+    password: !secret unifi_password
+    verify_ssl: false
+    new_device_defaults:
+      track_new_devices: false
   - platform: ping
-    count: 3
+    count: 5
     hosts:
       pihole: !secret pihole_ip
       website: !secret website_ip
