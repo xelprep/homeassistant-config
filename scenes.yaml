@@ -1,5 +1,7 @@
 - name: Nighttime
   entities:
+    alarm_control_panel.blink_sync:
+      state: armed_away
     light.bedroom_1_ceiling:
       state: on
       transition: 2
@@ -237,6 +239,8 @@
       brightness: 255
 - name: Daytime
   entities:
+    alarm_control_panel.blink_sync:
+      state: disarmed
     light.back_hall_light:
       state: on
       brightness: 2
