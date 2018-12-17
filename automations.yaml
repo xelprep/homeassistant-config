@@ -21,8 +21,10 @@
     event: sunset
     offset: -01:00:00
   action:
-    service: homeassistant.turn_on
+  - service: homeassistant.turn_on
     entity_id: switch.rear_patio_lights
+  - service: homeassistant.turn_on
+    entity_id: scene.working_at_night
 - id: sunup
   alias: Sunup Patio
   trigger:
