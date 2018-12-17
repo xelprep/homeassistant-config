@@ -121,3 +121,23 @@
     service: frontend.set_theme
     data:
       name: midnight
+- id: abode_and_blink_armed
+  alias: Blink Arms With Abode
+  trigger:
+  - entity_id: alarm_control_panel.abode_alarm
+    from: disarmed
+    platform: state
+    to: armed_home
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.arm_blink
+- id: abode_and_blink_disarmed
+  alias: Blink Disarms With Abode
+  trigger:
+  - entity_id: alarm_control_panel.abode_alarm
+    from: armed_home
+    platform: state
+    to: disarmed
+  action:
+  - service: homeassistant.turn_on
+    entity_id: scene.disarm_blink

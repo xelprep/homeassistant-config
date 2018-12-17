@@ -712,3 +712,11 @@
       transition: 2
       color_temp: 294
       brightness: 255
+- name: Arm Blink
+  entities:
+    alarm_control_panel.blink_sync:
+      state: armed_away
+- name: Disarm Blink
+  entities:
+    alarm_control_panel.blink_sync:
+      state: disarmed
