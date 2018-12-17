@@ -10,6 +10,7 @@ default_view:
   - group.game_room
   - group.all_switches
   - alarm_control_panel.abode_alarm
+  - alarm_control_panel.blink_sync
   - binary_sensor.back_door
   - binary_sensor.front_door
   - sensor.wink_relay_sensor_temperature_2
