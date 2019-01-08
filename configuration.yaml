@@ -290,7 +290,7 @@ device_tracker:
     new_device_defaults:
       track_new_devices: false
   - platform: ping
-    count: 5
+    count: 3
     hosts:
       pihole: !secret pihole_ip
       website: !secret website_ip
