@@ -135,7 +135,7 @@ system_status:
   icon: mdi:medical-bag
   entities:
   - sensor.memory_use_percent
-  - sensor.disk_use_percent_
+  - sensor.disk_use_percent
   - sensor.ipv4_address_eth0
   - sensor.ipv6_address_eth0
   - sensor.last_boot
@@ -187,7 +187,7 @@ everything_else:
   - sensor.bedroom_3_nest_protect_co_status
   - sensor.bedroom_3_nest_protect_smoke_status
   - sensor.date
-  - sensor.date__time
+  - sensor.date_time
   - sensor.front_hallway_nest_protect_battery_health
   - sensor.front_hallway_nest_protect_co_status
   - sensor.front_hallway_nest_protect_smoke_status
@@ -208,14 +208,14 @@ everything_else:
   - sensor.studio_nest_protect_co_status
   - sensor.studio_nest_protect_smoke_status
   - sensor.time
-  - sensor.time__date
+  - sensor.time_date
   - sensor.time_utc
   - sensor.wink_relay_sensor_humidity
   - sensor.wink_relay_sensor_proximity
   - sensor.wink_relay_sensor_temperature
   - sensor.yr_symbol
   - sensor.memory_use_percent
-  - sensor.disk_use_percent_
+  - sensor.disk_use_percent
   - sensor.ipv4_address_eth0
   - sensor.ipv6_address_eth0
   - sensor.since_last_boot
