@@ -73,7 +73,7 @@
       state: off
     switch.0120004868c63a843a03:
       state: off
-    switch.80881651840d8e52b132
+    switch.80881651840d8e52b132:
       state: off
 - name: Game Room Purple Diesel
   entities:
