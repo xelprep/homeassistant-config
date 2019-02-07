@@ -14,6 +14,9 @@ frontend:
   javascript_version: latest
   themes: !include_dir_merge_named themes
 
+# Enable System Health monitor
+system_health:
+
 # Enable map
 map:
 
