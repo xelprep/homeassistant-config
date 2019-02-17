@@ -149,12 +149,10 @@
     light.studio_front:
       state: on
       transition: 2
-      color_temp: 250
       brightness: 255
     light.studio_rear:
       state: on
       transition: 2
-      color_temp: 250
       brightness: 255
     light.studio_light_1:
       state: on
@@ -204,6 +202,7 @@
     light.kitchen_overhead_lamp:
       state: on
       transition: 2
+      color_temp: 250
       brightness: 255
     light.living_room_downlight_1:
       state: on
@@ -238,6 +237,7 @@
     light.living_room_lamp:
       state: on
       transition: 2
+      color_temp: 250
       brightness: 255
 - name: Daytime
   entities:
@@ -258,22 +258,16 @@
     light.studio_front:
       state: on
       transition: 2
-      color_temp: 328
       brightness: 255
     light.studio_rear:
       state: on
       transition: 2
-      color_temp: 328
       brightness: 255
     light.studio_light_1:
       state: on
       transition: 2
       color_temp: 328
       brightness: 255
-    light.bedroom_3_ceiling:
-      state: off
-    light.bedroom_3_accent:
-      state: off
     light.game_room_ceiling:
       state: on
       transition: 2
@@ -307,6 +301,7 @@
     light.kitchen_overhead_lamp:
       state: on
       transition: 2
+      color_temp: 294
       brightness: 255
     light.living_room_downlight_1:
       state: on
@@ -378,6 +373,7 @@
     light.kitchen_overhead_lamp:
       state: on
       transition: 2
+      color_temp: 369
       brightness: 180
     light.living_room_downlight_1:
       state: on
@@ -412,18 +408,17 @@
     light.living_room_lamp:
       state: on
       transition: 2
-      brightness: 20
+      color_temp: 369
+      brightness: 180
 - name: Entertaining At Night
   entities:
     light.studio_front:
       state: on
       transition: 2
-      color_temp: 294
       brightness: 100
     light.studio_rear:
       state: on
       transition: 2
-      color_temp: 294
       brightness: 100
     light.studio_light_1:
       state: off
@@ -459,10 +454,6 @@
       transition: 2
       color_temp: 369
       brightness: 190
-    light.kitchen_overhead_lamp:
-      state: on
-      transition: 2
-      brightness: 255
     light.living_room_downlight_1:
       state: on
       transition: 2
@@ -492,10 +483,6 @@
       state: on
       transition: 2
       color_temp: 369
-      brightness: 20
-    light.living_room_lamp:
-      state: on
-      transition: 2
       brightness: 20
     switch.0120004868c63a843a03:
       state: on
@@ -531,6 +518,7 @@
     light.kitchen_overhead_lamp:
       state: on
       transition: 2
+      color_temp: 354
       brightness: 255
     light.kitchen_downlight_4:
       state: on
@@ -570,6 +558,7 @@
     light.living_room_lamp:
       state: on
       transition: 2
+      color_temp: 354
       brightness: 198
 - name: Morning Light
   entities:
@@ -585,12 +574,10 @@
     light.studio_front:
       state: on
       transition: 3600
-      color_temp: 236
       brightness: 100
     light.studio_rear:
       state: on
       transition: 3600
-      color_temp: 236
       brightness: 100
     light.studio_light_1:
       state: on
@@ -640,6 +627,7 @@
     light.kitchen_overhead_lamp:
       state: on
       transition: 3600
+      color_temp: 236
       brightness: 255
     light.living_room_downlight_1:
       state: on
@@ -674,6 +662,7 @@
     light.living_room_lamp:
       state: on
       transition: 3600
+      color_temp: 236
       brightness: 125
 - name: Room 1
   entities:
@@ -691,12 +680,10 @@
     light.studio_front:
       state: on
       transition: 2
-      color_temp: 294
       brightness: 255
     light.studio_rear:
       state: on
       transition: 2
-      color_temp: 294
       brightness: 255
     light.studio_light_1:
       state: on

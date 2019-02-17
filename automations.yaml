@@ -54,7 +54,7 @@
 - id: b0b
   alias: Bob is here
   trigger:
-  - entity_id: device_tracker.bobs_iphone
+  - entity_id: device_tracker.bob_s_iphone
     from: not_home
     platform: state
     to: home
@@ -141,3 +141,24 @@
   action:
   - service: homeassistant.turn_on
     entity_id: scene.disarm_blink
+- id: entertaining_colors
+  alias: Entertaining At Night Color Loop
+  trigger:
+    - platform: event
+      event_type: call_service
+      event_data:
+        service_data:
+          entity_id: scene.entertaining_at_night
+        domain: scene
+        service: turn_on
+  action:
+  - service: light.lifx_effect_colorloop
+    data:
+      entity_id:
+        - light.kitchen_overhead_lamp
+        - light.living_room_lamp
+      brightness: 255
+      period: 30
+      transition: 10
+      spread: 100
+      change: 100
