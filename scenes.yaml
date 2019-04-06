@@ -243,6 +243,14 @@
   entities:
     alarm_control_panel.blink_sync:
       state: disarmed
+    light.bedroom_1_ceiling:
+      state: on
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    light.bedroom_1_lamp:
+      state: on
+      brightness: 255
     light.back_hall_light:
       state: on
       brightness: 2
