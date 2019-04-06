@@ -282,6 +282,12 @@ hue:
   bridges:
     - host: !secret hue_bridge
 
+# Enable Lifx
+lifx:
+  light:
+    - server: !secret ipaddress
+      broadcast: !secret bipaddress
+
 # Enable Wink
 wink:
   local_control: true
