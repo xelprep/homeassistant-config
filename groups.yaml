@@ -110,6 +110,22 @@ sonos:
   - media_player.studio
   view: true
 
+octoprint:
+  name: OctoPrint
+  icon: mdi:printer-3d
+  entities:
+  - binary_sensor.ender_5_printing
+  - binary_sensor.ender_5_printing_error
+  - sensor.ender_5_actual_bed_temp
+  - sensor.ender_5_actual_tool0_temp
+  - sensor.ender_5_current_state
+  - sensor.ender_5_job_percentage
+  - sensor.ender_5_target_bed_temp
+  - sensor.ender_5_target_tool0_temp
+  - sensor.ender_5_time_elapsed
+  - sensor.ender_5_time_remaining
+  view: true
+
 cameras:
   name: Cameras
   icon: mdi:camera
