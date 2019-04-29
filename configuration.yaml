@@ -108,6 +108,14 @@ nest:
     monitored_conditions:
       - 'online'
 
+# Enable OctoPrint
+octoprint:
+  host: !secret octoprint_server
+  api_key: !secret octoprint_api
+  name: ENDER_5
+  bed: true
+  number_of_tools: 1
+
 # Enable Sensors
 sensor:
   - platform: yr
@@ -165,7 +173,7 @@ ring:
 
 # Enable text to speech
 tts:
-  platform: google
+  platform: google_translate
 
 # Enable Abode
 abode:
