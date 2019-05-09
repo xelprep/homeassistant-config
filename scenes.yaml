@@ -41,13 +41,13 @@
     light.kitchen_downlight_1:
       state: on
       transition: 2
-      color_temp: 312
-      brightness: 2
+      rgb_color: [247, 25, 255]
+      brightness: 38
     light.kitchen_downlight_2:
       state: on
       transition: 2
-      color_temp: 312
-      brightness: 2
+      rgb_color: [255, 139, 7]
+      brightness: 38
     light.kitchen_downlight_3:
       state: off
     light.kitchen_downlight_4:
@@ -59,8 +59,8 @@
     light.living_room_downlight_2:
       state: on
       transition: 2
-      color_temp: 312
-      brightness: 2
+      rgb_color: [61, 17, 255]
+      brightness: 38
     light.living_room_downlight_3:
       state: off
     light.living_room_downlight_4:
@@ -182,22 +182,22 @@
     light.kitchen_downlight_1:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.kitchen_downlight_2:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.kitchen_downlight_3:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.kitchen_downlight_4:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.kitchen_overhead_lamp:
       state: on
@@ -207,32 +207,32 @@
     light.living_room_downlight_1:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.living_room_downlight_2:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.living_room_downlight_3:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.living_room_downlight_4:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.living_room_downlight_5:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.living_room_downlight_6:
       state: on
       transition: 2
-      color_temp: 250
+      color_temp: 1000
       brightness: 255
     light.living_room_lamp:
       state: on
@@ -246,7 +246,7 @@
     light.bedroom_1_ceiling:
       state: on
       transition: 2
-      color_temp: 294
+      color_temp: 353
       brightness: 255
     light.bedroom_1_lamp:
       state: on
@@ -271,153 +271,74 @@
       state: on
       transition: 2
       brightness: 255
-    light.studio_light_1:
-      state: on
-      transition: 2
-      color_temp: 328
-      brightness: 255
     light.game_room_ceiling:
       state: on
       transition: 2
-      color_temp: 294
-      brightness: 80
+      color_temp: 353
+      brightness: 255
     light.game_room_lamp:
       state: on
       transition: 2
-      color_temp: 294
-      brightness: 80
+      color_temp: 353
+      brightness: 255
     light.kitchen_downlight_1:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.kitchen_downlight_2:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.kitchen_downlight_3:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.kitchen_downlight_4:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.kitchen_overhead_lamp:
       state: on
       transition: 2
-      color_temp: 294
+      color_temp: 353
       brightness: 255
     light.living_room_downlight_1:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.living_room_downlight_2:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.living_room_downlight_3:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.living_room_downlight_4:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.living_room_downlight_5:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.living_room_downlight_6:
       state: on
       transition: 2
-      color_temp: 294
+      rgb_color: [255, 241, 45]
       brightness: 255
     light.living_room_lamp:
       state: off
       transition: 2
-- name: Evening
-  entities:
-    light.back_hall_light:
-      state: on
-      brightness: 2
-      transition: 2
-    light.front_hall_light:
-      state: on
-      brightness: 2
-      transition: 2
-    light.middle_hall_light:
-      state: on
-      brightness: 2
-      transition: 2
-    light.kitchen_downlight_1:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 190
-    light.kitchen_downlight_2:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 190
-    light.kitchen_downlight_3:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 20
-    light.kitchen_downlight_4:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 190
-    light.kitchen_overhead_lamp:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 180
-    light.living_room_downlight_1:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 20
-    light.living_room_downlight_2:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 20
-    light.living_room_downlight_3:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 20
-    light.living_room_downlight_4:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 20
-    light.living_room_downlight_5:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 20
-    light.living_room_downlight_6:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 20
-    light.living_room_lamp:
-      state: on
-      transition: 2
-      color_temp: 369
-      brightness: 180
 - name: Entertaining At Night
   entities:
     light.studio_front:
@@ -445,53 +366,53 @@
     light.kitchen_downlight_1:
       state: on
       transition: 2
-      color_temp: 369
+      rgb_color: [255, 183, 15]
       brightness: 255
     light.kitchen_downlight_2:
       state: on
       transition: 2
-      color_temp: 369
-      brightness: 190
+      rgb_color: [255, 183, 15]
+      brightness: 200
     light.kitchen_downlight_3:
       state: on
       transition: 2
-      color_temp: 369
-      brightness: 20
+      rgb_color: [255, 183, 15]
+      brightness: 40
     light.kitchen_downlight_4:
       state: on
       transition: 2
-      color_temp: 369
-      brightness: 190
+      rgb_color: [255, 183, 15]
+      brightness: 200
     light.living_room_downlight_1:
       state: on
       transition: 2
-      color_temp: 369
-      brightness: 20
+      rgb_color: [255, 183, 15]
+      brightness: 40
     light.living_room_downlight_2:
       state: on
       transition: 2
-      color_temp: 369
-      brightness: 20
+      rgb_color: [255, 183, 15]
+      brightness: 40
     light.living_room_downlight_3:
       state: on
       transition: 2
-      color_temp: 369
-      brightness: 20
+      rgb_color: [255, 183, 15]
+      brightness: 40
     light.living_room_downlight_4:
       state: on
       transition: 2
-      color_temp: 369
-      brightness: 20
+      rgb_color: [255, 183, 15]
+      brightness: 40
     light.living_room_downlight_5:
       state: on
       transition: 2
-      color_temp: 369
-      brightness: 20
+      rgb_color: [255, 183, 15]
+      brightness: 40
     light.living_room_downlight_6:
       state: on
       transition: 2
-      color_temp: 369
-      brightness: 20
+      rgb_color: [255, 183, 15]
+      brightness: 40
     switch.0120004868c63a843a03:
       state: on
 - name: Working At Night
@@ -511,18 +432,18 @@
     light.kitchen_downlight_1:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.kitchen_downlight_2:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.kitchen_downlight_3:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.kitchen_overhead_lamp:
       state: on
       transition: 2
@@ -531,38 +452,38 @@
     light.kitchen_downlight_4:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.living_room_downlight_1:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.living_room_downlight_2:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.living_room_downlight_3:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.living_room_downlight_4:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.living_room_downlight_5:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.living_room_downlight_6:
       state: on
       transition: 2
-      color_temp: 354
-      brightness: 198
+      rgb_color: [255, 183, 15]
+      brightness: 232
     light.living_room_lamp:
       state: on
       transition: 2
@@ -615,22 +536,22 @@
     light.kitchen_downlight_1:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.kitchen_downlight_2:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.kitchen_downlight_3:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.kitchen_downlight_4:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.kitchen_overhead_lamp:
       state: on
@@ -640,32 +561,32 @@
     light.living_room_downlight_1:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.living_room_downlight_2:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.living_room_downlight_3:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.living_room_downlight_4:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.living_room_downlight_5:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.living_room_downlight_6:
       state: on
       transition: 3600
-      color_temp: 236
+      rgb_color: [223, 255, 45]
       brightness: 125
     light.living_room_lamp:
       state: on
