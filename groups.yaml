@@ -6,8 +6,10 @@ default_view:
   - group.kitchen
   - group.living_room
   - group.studio
+  - group.studio_octopus
   - group.halls
   - group.game_room
+  - group.front_room_light_groups
   - group.all_switches
   - alarm_control_panel.abode_alarm
   - alarm_control_panel.blink_sync
@@ -71,12 +73,30 @@ living_room:
   - light.living_room_downlight_6
   - light.living_room_lamp
 
+front_room_light_groups:
+  name: Front Room Light Groups
+  entities:
+  - light.living_room_lights
+  - light.kitchen_lights
+  - light.front_room_lights
+
 studio:
   name: Studio
   entities:
-  - light.studio_light_1
+  - light.studio_downlight_1
+  - light.studio_lamp_1
+  - light.studio_octopus_lights
   - light.studio_front
-  - light.studio_rear
+#  - light.studio_rear
+
+studio_octopus:
+  name: Studio Octopus
+  entities:
+  - light.studio_octopus_1
+  - light.studio_octopus_2
+  - light.studio_octopus_3
+  - light.studio_octopus_4
+  - light.studio_octopus_5
 
 halls:
   name: Halls
