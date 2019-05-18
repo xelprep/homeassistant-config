@@ -225,11 +225,12 @@ sonos:
       - !secret sonos3
 
 # Add Alexa as media players via custom component
-media_player:
-  - platform: alexa
-    email: !secret amazon_email
-    password: !secret amazon_password
-    url: "amazon.com"
+alexa_media:
+  accounts:
+    - email: !secret amazon_email
+      password: !secret amazon_password
+      url: "amazon.com"
+
 # Enable Google Assistant Integration
 google_assistant:
   project_id: !secret google_assistant_project_id
