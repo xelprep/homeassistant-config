@@ -224,18 +224,12 @@ sonos:
       - !secret sonos2
       - !secret sonos3
 
-# Enable Emulated Hue Bridge
-#emulated_hue:
-#  listen_port: 80
-#  expose_by_default: true
-#  off_maps_to_on_domains:
-#  exposed_domains:
-#    - group
-#    - scene
-#    - script
-#    - input_boolean
-#    - switch
-
+# Add Alexa as media players via custom component
+media_player:
+  - platform: alexa
+    email: !secret amazon_email
+    password: !secret amazon_password
+    url: "amazon.com"
 # Enable Google Assistant Integration
 google_assistant:
   project_id: !secret google_assistant_project_id
