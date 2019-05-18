@@ -14,3 +14,4 @@ tts
 .wink.conf
 emulated_hue_ids.json
 known_devices.yaml
+custom_components
