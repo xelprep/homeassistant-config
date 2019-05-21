@@ -45,6 +45,10 @@ alexa:
     endpoint: https://api.amazonalexa.com/v3/events
     client_id: !secret alexa_client_id
     client_secret: !secret alexa_client_secret
+    filter:
+      exclude_entities:
+        - media_player.studio
+        - media_player.studio_2
 
 # Check for available updates
 updater:
