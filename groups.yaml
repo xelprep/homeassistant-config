@@ -173,6 +173,19 @@ garage_door:
   - cover.garage_door_opener
   view: true
 
+alexas:
+  name: Alexa Devices
+  icon: mdi:amazon-alexa
+  entities:
+  - media_player.bathroom_1_echo_dot
+  - media_player.bathroom_2_echo_dot
+  - media_player.bathroom_3_echo_dot
+  - media_player.bedroom_echo_dot
+  - media_player.game_room_echo_dot
+  - media_player.garage_echo_dot
+  - media_player.kitchen_echo_dot
+  view: true
+
 system_status:
   name: System Status
   icon: mdi:medical-bag
