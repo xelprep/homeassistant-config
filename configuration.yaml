@@ -61,6 +61,8 @@ discovery:
     - plex_mediaserver
     - roku
 
+zeroconf:
+
 # Enable voice commands from the frontend in enabled browsers
 conversation:
 
