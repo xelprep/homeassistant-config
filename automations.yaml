@@ -107,7 +107,7 @@
   alias: Turn Off Bedroom 3 Fan
   trigger:
     platform: time
-    at: 06:40:00
+    at: 09:15:00
   action:
     service: homeassistant.turn_off
     entity_id: switch.bedroom_3_fan

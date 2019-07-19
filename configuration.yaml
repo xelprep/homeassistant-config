@@ -34,7 +34,7 @@ recorder:
 
 # API password
 http:
-  api_password: !secret api_password
+#  api_password: !secret api_password
 
 # Enable api
 api:
