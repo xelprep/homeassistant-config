@@ -24,8 +24,8 @@ map:
 config:
 
 # Enable MQTT
-mqtt:
-  broker: !secret mqtt_broker
+#mqtt:
+# broker: !secret mqtt_broker
 
 # Enable support for tracking state changes over time.
 recorder:
@@ -140,12 +140,12 @@ sensor:
       - 'time_date'
       - 'time_utc'
       - 'beat'
-  - platform: mqtt_room
-    device_id: !secret pax_device_id
-    name: 'PAX3'
-    state_topic: 'room_presence'
-    timeout: 15
-    away_timeout: 15
+#  - platform: mqtt_room
+#    device_id: !secret pax_device_id
+#    name: 'PAX3'
+#    state_topic: 'room_presence'
+#    timeout: 15
+#    away_timeout: 15
   - platform: systemmonitor
     resources:
       - type: disk_use_percent
@@ -159,18 +159,18 @@ sensor:
       - type: ipv6_address
         arg: eth0
       - type: last_boot
-  - platform: template
-    sensors:
-      billy_battery:
-        friendly_name: Billy's Phone Battery
-        unit_of_measurement: "%"
-        value_template: '{{ states.device_tracker.billy_phone.attributes.battery|int }}'
-        device_class: battery
-      emily_battery:
-        friendly_name: Emily's Phone Battery
-        unit_of_measurement: "%"
-        value_template: '{{ states.device_tracker.emily_d474753a4b8c49678fb9cf671e595ee0.attributes.battery|int }}'
-        device_class: battery
+#  - platform: template
+#    sensors:
+#      billy_battery:
+#        friendly_name: Billy's Phone Battery
+#        unit_of_measurement: "%"
+#        value_template: '{{ states.device_tracker.billy_phone.attributes.battery|int }}'
+#        device_class: battery
+#      emily_battery:
+#        friendly_name: Emily's Phone Battery
+#        unit_of_measurement: "%"
+#        value_template: '{{ states.device_tracker.emily_d474753a4b8c49678fb9cf671e595ee0.attributes.battery|int }}'
+#        device_class: battery
 
 # Enable Ring Doorbell
 ring:
@@ -231,11 +231,11 @@ sonos:
       - !secret sonos3
 
 # Add Alexa as media players via custom component
-alexa_media:
-  accounts:
-    - email: !secret amazon_email
-      password: !secret amazon_password
-      url: "amazon.com"
+#alexa_media:
+#  accounts:
+#    - email: !secret amazon_email
+#      password: !secret amazon_password
+#      url: "amazon.com"
 
 # Enable Google Assistant Integration
 google_assistant:
@@ -347,6 +347,7 @@ wink:
 
 # Enable Device Tracking
 device_tracker:
+  - platform: bluetooth_tracker
   - platform: unifi
     host: !secret unifi_ip
     username: !secret unifi_username
