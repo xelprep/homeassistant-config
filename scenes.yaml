@@ -1,4 +1,5 @@
-- name: Nighttime
+- id: nighttime
+  name: Nighttime
   entities:
     alarm_control_panel.blink_sync:
       state: armed_away
@@ -89,7 +90,8 @@
       state: off
     switch.80881651840d8e52b132:
       state: off
-- name: Game Room Purple Diesel
+- id: purp
+  name: Game Room Purple Diesel
   entities:
     light.game_room_ceiling:
       state: on
@@ -101,7 +103,8 @@
       transition: 2
       rgb_color: [120, 0, 180]
       brightness: 180
-- name: Chill
+- id: chill
+  name: Chill
   entities:
     light.game_room_ceiling:
       state: on
@@ -113,7 +116,8 @@
       transition: 2
       rgb_color: [19, 0, 250]
       brightness: 250
-- name: Half Chill
+- id: halfchill
+  name: Half Chill
   entities:
     light.game_room_ceiling:
       state: on
@@ -125,7 +129,8 @@
       transition: 2
       rgb_color: [163, 207, 255]
       brightness: 255
-- name: No Chill
+- id: nochill
+  name: No Chill
   entities:
     light.game_room_ceiling:
       state: on
@@ -137,7 +142,8 @@
       transition: 2
       rgb_color: [255, 255, 255]
       brightness: 255
-- name: Cleaning
+- id: cleaning
+  name: Cleaning
   entities:
     light.back_hall_light:
       state: on
@@ -289,7 +295,8 @@
       transition: 2
       color_temp: 250
       brightness: 255
-- name: Daytime
+- id: daytime
+  name: Daytime
   entities:
     alarm_control_panel.blink_sync:
       state: disarmed
@@ -388,7 +395,8 @@
       transition: 2
       color_temp: 353
       brightness: 255
-- name: Entertaining At Night
+- id: entertaining
+  name: Entertaining At Night
   entities:
     light.studio_front:
       state: on
@@ -462,7 +470,8 @@
       brightness: 40
     switch.0120004868c63a843a03:
       state: on
-- name: Working At Night
+- id: working
+  name: Working At Night
   entities:
     light.back_hall_light:
       state: on
@@ -536,7 +545,8 @@
       transition: 2
       color_temp: 354
       brightness: 198
-- name: Morning Light
+- id: morning
+  name: Morning Light
   entities:
     light.bedroom_1_ceiling:
       state: on
@@ -631,14 +641,16 @@
       transition: 3600
       color_temp: 236
       brightness: 125
-- name: Room 1
+- id: room1
+  name: Room 1
   entities:
     light.bedroom_1_ceiling:
       state: on
       transition: 2
       color_temp: 294
       brightness: 255
-- name: Room 2
+- id: room2
+  name: Room 2
   entities:
     light.studio_front:
       state: on
@@ -648,7 +660,8 @@
       state: on
       transition: 2
       brightness: 255
-- name: Room 3
+- id: room3
+  name: Room 3
   entities:
     light.bedroom_3_ceiling:
       state: on
@@ -660,7 +673,8 @@
       transition: 2
       color_temp: 294
       brightness: 255
-- name: Laundry
+- id: laundry
+  name: Laundry
   entities:
     light.laundry_room_downlight_1:
       state: on
@@ -672,11 +686,13 @@
       transition: 2
       color_temp: 294
       brightness: 255
-- name: Arm Blink
+- id: armblink
+  name: Arm Blink
   entities:
     alarm_control_panel.blink_sync:
       state: armed_away
-- name: Disarm Blink
+- id: disarmblink
+  name: Disarm Blink
   entities:
     alarm_control_panel.blink_sync:
       state: disarmed
