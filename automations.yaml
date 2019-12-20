@@ -45,12 +45,12 @@
   - data:
       brightness: 255
       color_name: green
+      cycles: 3
       entity_id: light.game_room_lamp, light.game_room_ceiling
       mode: breathe
       period: 10
-      cycles: 3
       power_on: false
-    service: light.lifx_effect_pulse
+    service: lifx.effect_pulse
 - id: b0b
   alias: Bob is here
   trigger:
@@ -65,44 +65,42 @@
   alias: Tracked Device Offline Notification
   trigger:
     platform: state
-    entity_id: device_tracker.backupnas,
-      device_tracker.frontap, device_tracker.winkrelay,
-      device_tracker.huehub, device_tracker.winkhub, device_tracker.garagecam,
-      device_tracker.lifx1, device_tracker.lifx2, device_tracker.lifx3, device_tracker.lifx4,
-      device_tracker.lifx5, device_tracker.lifx6, device_tracker.sonosone,
-      device_tracker.pihole, device_tracker.primarynas, device_tracker.livingroomcam,
-      device_tracker.rearap, device_tracker.sonosamp, device_tracker.sonosplay5,
-      device_tracker.studioap, device_tracker.studioprinter,
+    entity_id: device_tracker.backupnas, device_tracker.frontap, device_tracker.winkrelay,
+      device_tracker.huehub, device_tracker.winkhub, device_tracker.garagecam, device_tracker.lifx1,
+      device_tracker.lifx2, device_tracker.lifx3, device_tracker.lifx4, device_tracker.lifx5,
+      device_tracker.lifx6, device_tracker.sonosone, device_tracker.pihole, device_tracker.primarynas,
+      device_tracker.livingroomcam, device_tracker.rearap, device_tracker.sonosamp,
+      device_tracker.sonosplay5, device_tracker.studioap, device_tracker.studioprinter,
       device_tracker.unifi, device_tracker.website, device_tracker.winserver
     from: home
     to: not_home
   action:
     service: notify.email_alerts
     data_template:
-      message:  >
-        {{ trigger.to_state.attributes.friendly_name }} has gone offline.
-      title: "[ALERT] {{ trigger.to_state.attributes.friendly_name }} Offline"
+      message: '{{ trigger.to_state.attributes.friendly_name }} has gone offline.
+
+        '
+      title: '[ALERT] {{ trigger.to_state.attributes.friendly_name }} Offline'
 - id: device0nline
   alias: Tracked Device Online Notification
   trigger:
     platform: state
-    entity_id: device_tracker.backupnas,
-      device_tracker.frontap, device_tracker.winkrelay,
-      device_tracker.huehub, device_tracker.winkhub, device_tracker.garagecam,
-      device_tracker.lifx1, device_tracker.lifx2, device_tracker.lifx3, device_tracker.lifx4,
-      device_tracker.lifx5, device_tracker.lifx6, device_tracker.sonosone,
-      device_tracker.pihole, device_tracker.primarynas, device_tracker.livingroomcam,
-      device_tracker.rearap, device_tracker.sonosamp, device_tracker.sonosplay5,
-      device_tracker.studioap, device_tracker.studioprinter,
+    entity_id: device_tracker.backupnas, device_tracker.frontap, device_tracker.winkrelay,
+      device_tracker.huehub, device_tracker.winkhub, device_tracker.garagecam, device_tracker.lifx1,
+      device_tracker.lifx2, device_tracker.lifx3, device_tracker.lifx4, device_tracker.lifx5,
+      device_tracker.lifx6, device_tracker.sonosone, device_tracker.pihole, device_tracker.primarynas,
+      device_tracker.livingroomcam, device_tracker.rearap, device_tracker.sonosamp,
+      device_tracker.sonosplay5, device_tracker.studioap, device_tracker.studioprinter,
       device_tracker.unifi, device_tracker.website, device_tracker.winserver
     from: not_home
     to: home
   action:
     service: notify.email_alerts
     data_template:
-      message:  >
-        {{ trigger.to_state.attributes.friendly_name }} has come back online.
-      title: "[RESOLVED] {{ trigger.to_state.attributes.friendly_name }} Online"
+      message: '{{ trigger.to_state.attributes.friendly_name }} has come back online.
+
+        '
+      title: '[RESOLVED] {{ trigger.to_state.attributes.friendly_name }} Online'
 - id: bed3fan0ff
   alias: Turn Off Bedroom 3 Fan
   trigger:
@@ -112,11 +110,11 @@
     service: homeassistant.turn_off
     entity_id: switch.bedroom_3_fan
 - id: s3tth3m3
-  alias: 'Automation for Theme HA Restart'
-  initial_state: True
+  alias: Automation for Theme HA Restart
+  initial_state: true
   trigger:
-    - platform: homeassistant
-      event: start
+  - platform: homeassistant
+    event: start
   action:
     service: frontend.set_theme
     data:
@@ -144,21 +142,19 @@
 - id: entertaining_colors
   alias: Entertaining At Night Color Loop
   trigger:
-    - platform: event
-      event_type: call_service
-      event_data:
-        service_data:
-          entity_id: scene.entertaining_at_night
-        domain: scene
-        service: turn_on
+  - event_data:
+      domain: scene
+      service: turn_on
+      service_data:
+        entity_id: scene.entertaining_at_night
+    event_type: call_service
+    platform: event
   action:
-  - service: light.lifx_effect_colorloop
-    data:
-      entity_id:
-        - light.kitchen_overhead_lamp
-        - light.living_room_lamp
+  - data:
       brightness: 255
-      period: 30
-      transition: 10
-      spread: 100
       change: 100
+      period: 30
+      spread: 100
+      transition: 10
+    entity_id: light.kitchen_overhead_lamp, light.living_room_lamp
+    service: lifx.effect_colorloop

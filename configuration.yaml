@@ -24,8 +24,8 @@ map:
 config:
 
 # Enable MQTT
-#mqtt:
-# broker: !secret mqtt_broker
+mqtt:
+  password: !secret mqtt_password
 
 # Enable support for tracking state changes over time.
 recorder:
@@ -355,6 +355,7 @@ wink:
 # Enable Device Tracking
 device_tracker:
   - platform: bluetooth_tracker
+  - platform: bluetooth_le_tracker
 #  - platform: unifi
 #    host: !secret unifi_ip
 #    username: !secret unifi_username
