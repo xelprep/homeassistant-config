@@ -37,7 +37,6 @@ recorder:
 
 # API password
 http:
-#  api_password: !secret api_password
 
 # Enable api
 api:
@@ -87,10 +86,6 @@ camera:
   - platform: ffmpeg
     input: !secret garage_camera_url
     name: Garage Camera
-#  - platform: yi
-#    name: Living Room Camera
-#    host: !secret living_room_camera_host
-#    password: !secret living_room_camera_pass
 
 # Enable Blink support
 blink:
@@ -143,12 +138,6 @@ sensor:
       - 'time_date'
       - 'time_utc'
       - 'beat'
-#  - platform: mqtt_room
-#    device_id: !secret pax_device_id
-#    name: 'PAX3'
-#    state_topic: 'room_presence'
-#    timeout: 15
-#    away_timeout: 15
   - platform: systemmonitor
     resources:
       - type: disk_use_percent
@@ -162,18 +151,6 @@ sensor:
       - type: ipv6_address
         arg: eth0
       - type: last_boot
-#  - platform: template
-#    sensors:
-#      billy_battery:
-#        friendly_name: Billy's Phone Battery
-#        unit_of_measurement: "%"
-#        value_template: '{{ states.device_tracker.billy_phone.attributes.battery|int }}'
-#        device_class: battery
-#      emily_battery:
-#        friendly_name: Emily's Phone Battery
-#        unit_of_measurement: "%"
-#        value_template: '{{ states.device_tracker.emily_d474753a4b8c49678fb9cf671e595ee0.attributes.battery|int }}'
-#        device_class: battery
 
 # Enable Ring Doorbell
 ring:
@@ -183,11 +160,6 @@ ring:
 # Enable text to speech
 tts:
   platform: google_translate
-
-# Enable Abode
-#abode:
-#  username: !secret abode_username
-#  password: !secret abode_password
 
 # Enable email alerts
 notify:
@@ -210,21 +182,6 @@ tuya:
   password: !secret tuya_password
   country_code: 1
 
-# Enable Apple TVs
-#apple_tv:
-#  - host: !secret apple_tv_1
-#    name: Living Room Apple TV
-#    login_id: !secret apple_tv_id
-#  - host: !secret apple_tv_2
-#    name: Bedroom Apple TV
-#    login_id: !secret apple_tv_id
-#  - host: !secret apple_tv_3
-#    name: Game Room Apple TV
-#    login_id: !secret apple_tv_id
-#  - host: !secret apple_tv_4
-#    name: Studio Apple TV
-#    login_id: !secret apple_tv_id
-
 # Enable Sonos
 sonos:
   media_player:
@@ -232,13 +189,6 @@ sonos:
       - !secret sonos1
       - !secret sonos2
       - !secret sonos3
-
-# Add Alexa as media players via custom component
-#alexa_media:
-#  accounts:
-#    - email: !secret amazon_email
-#      password: !secret amazon_password
-#      url: "amazon.com"
 
 # Enable Google Assistant Integration
 google_assistant:
@@ -251,22 +201,6 @@ google_assistant:
     - input_boolean
     - switch
   entity_config:
-#    group.all_automations:
-#      expose: false
-#    group.all_covers:
-#      expose: false
-#    group.all_devices:
-#      expose: false
-#    group.all_lights:
-#      expose: false
-#    group.all_locks:
-#      expose: false
-#    group.all_remotes:
-#      expose: false
-#    group.all_scripts:
-#      expose: false
-#    group.all_switches:
-#      expose: false
     group.default_view:
       expose: false
     group.everything_else:
@@ -288,17 +222,6 @@ google_assistant:
 # Enable IFTTT
 ifttt:
   key: !secret ifttt_key
-
-# Enable Hue
-#hue:
-#  bridges:
-#    - host: !secret hue_bridge
-
-# Enable Lifx
-#lifx:
-#  light:
-#    - server: !secret ipaddress
-#      broadcast: !secret bipaddress
 
 # Configure Light Groups
 light:
@@ -335,37 +258,21 @@ light:
       - light.living_room_downlight_5
       - light.living_room_downlight_6
       - light.living_room_lamp
-  - platform: group
-    name: Studio Octopus Lights
-    entities:
-      - light.studio_octopus_1
-      - light.studio_octopus_2
-      - light.studio_octopus_3
-      - light.studio_octopus_4
-      - light.studio_octopus_5
+  # - platform: group
+  #   name: Studio Octopus Lights
+  #   entities:
+  #     - light.studio_octopus_1
+  #     - light.studio_octopus_2
+  #     - light.studio_octopus_3
+  #     - light.studio_octopus_4
+  #     - light.studio_octopus_5
 
 # Enable Wink
 wink:
   local_control: true
 
-# Enable unifi
-#unifi:
-#  controllers:
-#    - host: !secret unifi_ip
-#      site: BBH
-#      dont_track_wired_clients: true
-
 # Enable Device Tracking
 device_tracker:
-#  - platform: bluetooth_tracker
-#  - platform: bluetooth_le_tracker
-#  - platform: unifi
-#    host: !secret unifi_ip
-#    username: !secret unifi_username
-#    password: !secret unifi_password
-#    verify_ssl: false
-#    new_device_defaults:
-#      track_new_devices: false
   - platform: ping
     count: 3
     hosts:
