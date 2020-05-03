@@ -23,6 +23,9 @@ map:
 # Enable configuration UI
 config:
 
+# Enable iOS app
+mobile_app:
+
 # Enable MQTT
 mqtt:
   password: !secret mqtt_password
@@ -182,9 +185,9 @@ tts:
   platform: google_translate
 
 # Enable Abode
-abode:
-  username: !secret abode_username
-  password: !secret abode_password
+#abode:
+#  username: !secret abode_username
+#  password: !secret abode_password
 
 # Enable email alerts
 notify:
