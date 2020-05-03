@@ -290,15 +290,9 @@ device_tracker:
       frontap: !secret frontap_ip
       studioap: !secret studioap_ip
       huehub: !secret huehub_ip
-      livingroomappletv: !secret livingroomappletv_ip
-      bedroomappletv: !secret bedroomappletv_ip
-      gameroomappletv: !secret gameroomappletv_ip
-      studioappletv: !secret studioappletv_ip
       winserver: !secret winserver_ip
-      winkrelay: !secret winkrelay_ip
       winkhub: !secret winkhub_ip
       garagecam: !secret garagecam_ip
-      livingroomcam: !secret livingroomcam_ip
       lifx1: !secret lifx1_ip
       lifx2: !secret lifx2_ip
       lifx3: !secret lifx3_ip
