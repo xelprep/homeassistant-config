@@ -6,7 +6,6 @@ default_view:
   - group.kitchen
   - group.living_room
   - group.studio
-  - group.studio_octopus
   - group.halls
   - group.laundry_room
   - group.game_room
@@ -15,8 +14,6 @@ default_view:
   - alarm_control_panel.blink_bbh
   - binary_sensor.back_door
   - binary_sensor.front_door
-  - sensor.wink_relay_sensor_temperature_2
-  - sensor.wink_relay_sensor_temperature
   - scene.daytime
   - scene.entertaining_at_night
   - scene.evening
@@ -30,10 +27,6 @@ default_view:
   - scene.working_at_night
   - scene.cleaning
   - scene.laundry
-  - device_tracker.billy_phone
-  - device_tracker.emily_d474753a4b8c49678fb9cf671e595ee0
-  - sensor.billy_battery
-  - sensor.emily_battery
   - sensor.ring_front_door_battery
   - sensor.blink_living_room_battery
   - sensor.blink_backyard_battery
