@@ -11,7 +11,6 @@ default_view:
   - group.laundry_room
   - group.game_room
   - group.front_room_light_groups
-#  - group.all_switches
   - alarm_control_panel.abode_alarm
   - alarm_control_panel.blink_bbh
   - binary_sensor.back_door
@@ -40,7 +39,6 @@ default_view:
   - sensor.blink_backyard_battery
   - sensor.blink_driveway_battery
   - sensor.blink_front_door_battery
-  view: true
 
 bedroom_1:
   name: Bedroom 1
@@ -126,7 +124,6 @@ apple_tvs:
   - media_player.game_room_apple_tv
   - media_player.living_room_apple_tv
   - media_player.studio_apple_tv
-  view: true
 
 sonos:
   name: Sonos
@@ -135,7 +132,6 @@ sonos:
   - media_player.front_room
   - media_player.back_room
   - media_player.studio
-  view: true
 
 octoprint:
   name: OctoPrint
@@ -151,7 +147,6 @@ octoprint:
   - sensor.ender_5_target_tool0_temp
   - sensor.ender_5_time_elapsed
   - sensor.ender_5_time_remaining
-  view: true
 
 cameras:
   name: Cameras
@@ -164,14 +159,12 @@ cameras:
   - camera.blink_front_door
   - camera.blink_driveway
   - camera.living_room_motion_camera
-  view: true
 
 garage_door:
   name: Garage Door
   icon: mdi:garage
   entities:
   - cover.garage_door_opener
-  view: true
 
 alexas:
   name: Alexa Devices
@@ -184,7 +177,6 @@ alexas:
   - media_player.game_room_echo_dot
   - media_player.garage_echo_dot
   - media_player.kitchen_echo_dot
-  view: true
 
 system_status:
   name: System Status
@@ -198,20 +190,11 @@ system_status:
   - sensor.load_1m
   - sensor.load_5m
   - sensor.load_15m
-  view: true
 
 everything_else:
   name: Everything Else
   icon: mdi:magnify
   entities:
-#  - group.all_automations
-#  - group.all_covers
-#  - group.all_devices
-#  - group.all_lights
-#  - group.all_locks
-#  - group.all_remotes
-#  - group.all_scripts
-#  - group.all_switches
   - binary_sensor.back_door
   - binary_sensor.back_hallway_1_nest_protect_online
   - binary_sensor.back_hallway_2_nest_protect_online
@@ -279,4 +262,3 @@ everything_else:
   - sensor.load_5m
   - sensor.load_15m
   - sun.sun
-  view: true
