@@ -84,10 +84,10 @@ camera:
   - platform: ffmpeg
     input: !secret garage_camera_url
     name: Garage Camera
-  - platform: yi
-    name: Living Room Camera
-    host: !secret living_room_camera_host
-    password: !secret living_room_camera_pass
+#  - platform: yi
+#    name: Living Room Camera
+#    host: !secret living_room_camera_host
+#    password: !secret living_room_camera_pass
 
 # Enable Blink support
 blink:
@@ -125,13 +125,13 @@ octoprint:
 # Enable Sensors
 sensor:
   - platform: yr
-  - platform: ring
-    monitored_conditions:
-      - battery
-      - last_activity
-      - last_ding
-      - last_motion
-      - volume
+#  - platform: ring
+#    monitored_conditions:
+#      - battery
+#      - last_activity
+#      - last_ding
+#      - last_motion
+#      - volume
   - platform: time_date
     display_options:
       - 'time'
@@ -208,19 +208,19 @@ tuya:
   country_code: 1
 
 # Enable Apple TVs
-apple_tv:
-  - host: !secret apple_tv_1
-    name: Living Room Apple TV
-    login_id: !secret apple_tv_id
-  - host: !secret apple_tv_2
-    name: Bedroom Apple TV
-    login_id: !secret apple_tv_id
-  - host: !secret apple_tv_3
-    name: Game Room Apple TV
-    login_id: !secret apple_tv_id
-  - host: !secret apple_tv_4
-    name: Studio Apple TV
-    login_id: !secret apple_tv_id
+#apple_tv:
+#  - host: !secret apple_tv_1
+#    name: Living Room Apple TV
+#    login_id: !secret apple_tv_id
+#  - host: !secret apple_tv_2
+#    name: Bedroom Apple TV
+#    login_id: !secret apple_tv_id
+#  - host: !secret apple_tv_3
+#    name: Game Room Apple TV
+#    login_id: !secret apple_tv_id
+#  - host: !secret apple_tv_4
+#    name: Studio Apple TV
+#    login_id: !secret apple_tv_id
 
 # Enable Sonos
 sonos:
@@ -248,22 +248,22 @@ google_assistant:
     - input_boolean
     - switch
   entity_config:
-    group.all_automations:
-      expose: false
-    group.all_covers:
-      expose: false
-    group.all_devices:
-      expose: false
-    group.all_lights:
-      expose: false
-    group.all_locks:
-      expose: false
-    group.all_remotes:
-      expose: false
-    group.all_scripts:
-      expose: false
-    group.all_switches:
-      expose: false
+#    group.all_automations:
+#      expose: false
+#    group.all_covers:
+#      expose: false
+#    group.all_devices:
+#      expose: false
+#    group.all_lights:
+#      expose: false
+#    group.all_locks:
+#      expose: false
+#    group.all_remotes:
+#      expose: false
+#    group.all_scripts:
+#      expose: false
+#    group.all_switches:
+#      expose: false
     group.default_view:
       expose: false
     group.everything_else:
@@ -287,15 +287,15 @@ ifttt:
   key: !secret ifttt_key
 
 # Enable Hue
-hue:
-  bridges:
-    - host: !secret hue_bridge
+#hue:
+#  bridges:
+#    - host: !secret hue_bridge
 
 # Enable Lifx
-lifx:
-  light:
-    - server: !secret ipaddress
-      broadcast: !secret bipaddress
+#lifx:
+#  light:
+#    - server: !secret ipaddress
+#      broadcast: !secret bipaddress
 
 # Configure Light Groups
 light:
@@ -354,8 +354,8 @@ wink:
 
 # Enable Device Tracking
 device_tracker:
-  - platform: bluetooth_tracker
-  - platform: bluetooth_le_tracker
+#  - platform: bluetooth_tracker
+#  - platform: bluetooth_le_tracker
 #  - platform: unifi
 #    host: !secret unifi_ip
 #    username: !secret unifi_username

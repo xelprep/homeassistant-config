@@ -11,9 +11,9 @@ default_view:
   - group.laundry_room
   - group.game_room
   - group.front_room_light_groups
-  - group.all_switches
+#  - group.all_switches
   - alarm_control_panel.abode_alarm
-  - alarm_control_panel.blink_sync
+  - alarm_control_panel.blink_bbh
   - binary_sensor.back_door
   - binary_sensor.front_door
   - sensor.wink_relay_sensor_temperature_2
@@ -204,14 +204,14 @@ everything_else:
   name: Everything Else
   icon: mdi:magnify
   entities:
-  - group.all_automations
-  - group.all_covers
-  - group.all_devices
-  - group.all_lights
-  - group.all_locks
-  - group.all_remotes
-  - group.all_scripts
-  - group.all_switches
+#  - group.all_automations
+#  - group.all_covers
+#  - group.all_devices
+#  - group.all_lights
+#  - group.all_locks
+#  - group.all_remotes
+#  - group.all_scripts
+#  - group.all_switches
   - binary_sensor.back_door
   - binary_sensor.back_hallway_1_nest_protect_online
   - binary_sensor.back_hallway_2_nest_protect_online

@@ -1,7 +1,7 @@
 - id: nighttime
   name: Nighttime
   entities:
-    alarm_control_panel.blink_sync:
+    alarm_control_panel.blink_bbh:
       state: armed_away
     light.bedroom_1_ceiling:
       state: on
@@ -298,7 +298,7 @@
 - id: daytime
   name: Daytime
   entities:
-    alarm_control_panel.blink_sync:
+    alarm_control_panel.blink_bbh:
       state: disarmed
     light.bedroom_1_ceiling:
       state: on
@@ -689,10 +689,10 @@
 - id: armblink
   name: Arm Blink
   entities:
-    alarm_control_panel.blink_sync:
+    alarm_control_panel.blink_bbh:
       state: armed_away
 - id: disarmblink
   name: Disarm Blink
   entities:
-    alarm_control_panel.blink_sync:
+    alarm_control_panel.blink_bbh:
       state: disarmed
