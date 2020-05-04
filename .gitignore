@@ -15,4 +15,7 @@ tts
 emulated_hue_ids.json
 known_devices.yaml
 custom_components
-alexa_media.emilyblythejones@gmail.com.pickle
+*.pickle
+service_account.json
+esphome/config/*
+!esphome/config/*.yaml
