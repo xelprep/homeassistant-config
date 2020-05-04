@@ -1,6 +1,6 @@
 abodepy_cache.pickle
 home-assistant.log
-home-assistant_v2.db
+home-assistant_v2.db*
 .ios.conf
 *DS_Store
 nest.conf
