@@ -1,0 +1,51 @@
+esphome:
+  name: living_room_downlight_1
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Living Room Downlight 1"
+    password: !secret esphome_fallback_pw
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+my9231:
+  data_pin: GPIO13
+  clock_pin: GPIO15
+  num_channels: 4
+  num_chips: 1
+
+output:
+  - platform: my9231
+    id: output_blue
+    channel: 1
+  - platform: my9231
+    id: output_red
+    channel: 3
+  - platform: my9231
+    id: output_green
+    channel: 2
+  - platform: my9231
+    id: output_white
+    channel: 0
+
+light:
+  - platform: rgbw
+    name: living_room_downlight_1
+    red: output_red
+    green: output_green
+    blue: output_blue
+    white: output_white

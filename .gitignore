@@ -19,4 +19,3 @@ custom_components
 service_account.json
 esphome/config/*
 !esphome/config/*.yaml
-!esphome/config/secrets.yaml
