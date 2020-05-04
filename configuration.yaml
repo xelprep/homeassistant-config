@@ -27,13 +27,11 @@ config:
 mobile_app:
 
 # Enable MQTT
-mqtt:
-  password: !secret mqtt_password
+# mqtt:
+#   password: !secret mqtt_password
 
 # Enable support for tracking state changes over time.
 recorder:
-  purge_interval: 1
-  purge_keep_days: 7
 
 # API password
 http:
@@ -50,7 +48,6 @@ alexa:
     filter:
       exclude_entities:
         - media_player.studio
-        - media_player.studio_2
 
 # Check for available updates
 updater:
@@ -58,10 +55,6 @@ updater:
 
 # Discover some devices automatically
 discovery:
-  ignore:
-    - apple_tv
-    - plex_mediaserver
-    - roku
 
 zeroconf:
 
@@ -93,24 +86,24 @@ blink:
   password: !secret blink_password
 
 # Enable Garage Door tracking
-cover:
-  - platform: myq
-    username: !secret myq_username
-    password: !secret myq_pass
-    type: chamberlain
+# cover:
+#   - platform: myq
+#     username: !secret myq_username
+#     password: !secret myq_pass
+#     type: chamberlain
 
 # Enable Nest
-nest:
-  client_id: !secret nest_client_id
-  client_secret: !secret nest_client_secret
-  sensors:
-    monitored_conditions:
-      - 'co_status'
-      - 'smoke_status'
-      - 'battery_health'
-  binary_sensors:
-    monitored_conditions:
-      - 'online'
+# nest:
+#   client_id: !secret nest_client_id
+#   client_secret: !secret nest_client_secret
+#   sensors:
+#     monitored_conditions:
+#       - 'co_status'
+#       - 'smoke_status'
+#       - 'battery_health'
+#   binary_sensors:
+#     monitored_conditions:
+#       - 'online'
 
 # Enable OctoPrint
 octoprint:
@@ -123,13 +116,6 @@ octoprint:
 # Enable Sensors
 sensor:
   - platform: yr
-#  - platform: ring
-#    monitored_conditions:
-#      - battery
-#      - last_activity
-#      - last_ding
-#      - last_motion
-#      - volume
   - platform: time_date
     display_options:
       - 'time'
@@ -153,9 +139,9 @@ sensor:
       - type: last_boot
 
 # Enable Ring Doorbell
-ring:
-  username: !secret ring_username
-  password: !secret ring_password
+# ring:
+#   username: !secret ring_username
+#   password: !secret ring_password
 
 # Enable text to speech
 tts:
@@ -193,7 +179,8 @@ sonos:
 # Enable Google Assistant Integration
 google_assistant:
   project_id: !secret google_assistant_project_id
-  api_key: !secret google_assistant_api_key
+  service_account: !include service_account.json
+  report_state: true
   exposed_domains:
     - script
     - scene
@@ -258,14 +245,6 @@ light:
       - light.living_room_downlight_5
       - light.living_room_downlight_6
       - light.living_room_lamp
-  # - platform: group
-  #   name: Studio Octopus Lights
-  #   entities:
-  #     - light.studio_octopus_1
-  #     - light.studio_octopus_2
-  #     - light.studio_octopus_3
-  #     - light.studio_octopus_4
-  #     - light.studio_octopus_5
 
 # Enable Wink
 wink:
