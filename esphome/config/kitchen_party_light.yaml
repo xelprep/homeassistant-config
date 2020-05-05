@@ -1,0 +1,51 @@
+esphome:
+  name: kitchen_party_light
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Kitchen Party Light"
+    password: !secret esphome_fallback_pw
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO5
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Kitchen Party Light Button"
+    on_press:
+      - switch.toggle: relay
+
+switch:
+  - platform: gpio
+    id: led
+    pin:
+      number: GPIO13
+      inverted: true
+
+  - platform: gpio
+    name: "Kitchen Party Light"
+    pin: GPIO4
+    id: relay
+
+    on_turn_on:
+      - switch.turn_on: led
+
+    on_turn_off:
+      - switch.turn_off: led
