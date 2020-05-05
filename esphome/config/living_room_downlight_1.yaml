@@ -45,7 +45,40 @@ output:
 light:
   - platform: rgbw
     name: living_room_downlight_1
+    restore_mode: RESTORE_DEFAULT_ON
     red: output_red
     green: output_green
     blue: output_blue
     white: output_white
+    effects:
+      - random:
+      - random:
+          name: Random (Fast)
+          transition_length: 1s
+          update_interval: 1s
+      - strobe:
+      - strobe:
+          name: Strobe (Police)
+          colors:
+            - state: True
+              brightness: 100%
+              red: 100%
+              green: 0%
+              blue: 0%
+              white: 0%
+              duration: 250ms
+            - state: False
+              duration: 250ms
+            - state: True
+              brightness: 100%
+              red: 0%
+              green: 0%
+              blue: 100%
+              white: 0%
+              duration: 250ms
+      - flicker:
+      - flicker:
+          name: Flicker (Intense)
+          alpha: 80%
+          intensity: 5%
+      

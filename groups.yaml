@@ -17,7 +17,7 @@ kitchen:
   - light.kitchen_downlight_3
   - light.kitchen_downlight_4
   - light.kitchen_overhead_lamp
-  - switch.0120004868c63a843a03
+  - switch.kitchen_party_light
 
 living_room:
   name: Living Room

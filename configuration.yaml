@@ -85,13 +85,6 @@ blink:
   username: !secret blink_username
   password: !secret blink_password
 
-# Enable Garage Door tracking
-# cover:
-#   - platform: myq
-#     username: !secret myq_username
-#     password: !secret myq_pass
-#     type: chamberlain
-
 # Enable Nest
 # nest:
 #   client_id: !secret nest_client_id
@@ -138,11 +131,6 @@ sensor:
         arg: eth0
       - type: last_boot
 
-# Enable Ring Doorbell
-# ring:
-#   username: !secret ring_username
-#   password: !secret ring_password
-
 # Enable text to speech
 tts:
   platform: google_translate
@@ -161,12 +149,6 @@ notify:
     recipient:
       - !secret alert_recipient
     sender_name: Home Assistant
-
-# Enable Tuya
-tuya:
-  username: !secret tuya_username
-  password: !secret tuya_password
-  country_code: 1
 
 # Enable Sonos
 sonos:
@@ -204,7 +186,6 @@ google_assistant:
       expose: false
     scene.quick_nighttime:
       expose: false
-
 
 # Enable IFTTT
 ifttt:
