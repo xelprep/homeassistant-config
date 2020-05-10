@@ -1,88 +1,103 @@
 purple_diesel:
-  alias: "Purple Diesel"
+  alias: Purple Diesel
   sequence:
-    - service: homeassistant.turn_off
-      entity_id: script.purple_diesel
-    - service: homeassistant.turn_on
-      entity_id: scene.game_room_purple_diesel
-    - service: media_player.sonos_unjoin
+  - service: homeassistant.turn_off
+    entity_id: script.purple_diesel
+  - service: homeassistant.turn_on
+    entity_id: scene.game_room_purple_diesel
+  - service: media_player.sonos_unjoin
+    entity_id:
+    - media_player.back_room
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.back_room
+    data:
+      volume_level: 0.5
+  - service: media_player.select_source
+    data:
       entity_id:
-        - media_player.back_room
-    - service: media_player.volume_set
-      entity_id:
-        - media_player.back_room
-      data:
-        volume_level: 0.5
-    - service: media_player.select_source
-      data:
-        entity_id:
-          - media_player.back_room
-        source: 'Run The Jewels Radio'
-    - service: media_player.media_play
-      entity_id:
-        - media_player.back_room
+      - media_player.back_room
+      source: Run The Jewels Radio
+  - service: media_player.media_play
+    entity_id:
+    - media_player.back_room
 bob_is_here:
-  alias: "The Bionic Midwest Dad"
+  alias: The Bionic Midwest Dad
   sequence:
-    - service: homeassistant.turn_off
-      entity_id: script.bob_is_here
-    - service: media_player.sonos_join
-      data:
-        master: media_player.front_room
+  - service: homeassistant.turn_off
+    entity_id: script.bob_is_here
+  - service: media_player.sonos_join
+    data:
+      master: media_player.front_room
+    entity_id:
+    - media_player.front_room
+    - media_player.back_room
+    - media_player.studio
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.front_room
+    data:
+      volume_level: 0.5
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.back_room
+    data:
+      volume_level: 0.5
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.studio
+    data:
+      volume_level: 0.5
+  - service: media_player.select_source
+    data:
       entity_id:
-        - media_player.front_room
-        - media_player.back_room
-        - media_player.studio
-    - service: media_player.volume_set
-      entity_id:
-        - media_player.front_room
-      data:
-        volume_level: 0.5
-    - service: media_player.volume_set
-      entity_id:
-        - media_player.back_room
-      data:
-        volume_level: 0.5
-    - service: media_player.volume_set
-      entity_id:
-        - media_player.studio
-      data:
-        volume_level: 0.5
-    - service: media_player.select_source
-      data:
-        entity_id:
-          - media_player.front_room
-        source: 'WWE: I Won''t Do What You Tell Me (Stone Cold Steve Austin) [Original Theme]'
-    - service: media_player.media_play
-      entity_id:
-        - media_player.front_room
+      - media_player.front_room
+      source: 'WWE: I Won''t Do What You Tell Me (Stone Cold Steve Austin) [Original
+        Theme]'
+  - service: media_player.media_play
+    entity_id:
+    - media_player.front_room
 hipster_rollerdisco:
-  alias: 'Hipster Rollerdisco'
+  alias: Hipster Rollerdisco
   sequence:
-    - service: homeassistant.turn_off
-      entity_id: script.hipster_rollerdisco
-    - service: media_player.sonos_unjoin
+  - service: homeassistant.turn_off
+    entity_id: script.hipster_rollerdisco
+  - service: media_player.sonos_unjoin
+    entity_id:
+    - media_player.back_room
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.back_room
+    data:
+      volume_level: 0.5
+  - service: media_player.select_source
+    data:
       entity_id:
-        - media_player.back_room
-    - service: media_player.volume_set
+      - media_player.back_room
+      source: Ssion Radio
+  - service: media_player.media_play
+    entity_id:
+    - media_player.back_room
+  - service: light.lifx_effect_colorloop
+    data:
       entity_id:
-        - media_player.back_room
+      - light.game_room_ceiling
+      - light.game_room_lamp
+      brightness: 100
+      period: 10
+      spread: 100
+      change: 100
+random_effects:
+  alias: Random Effect Testing
+  sequence:
+    - service: light.turn_on
       data:
-        volume_level: 0.5
-    - service: media_player.select_source
+        entity_id: light.living_room_downlight_1, light.living_room_downlight_2, light.living_room_downlight_3, light.living_room_downlight_4, light.living_room_downlight_5, light.living_room_downlight_6, light.kitchen_downlight_1, light.kitchen_downlight_2, light.kitchen_downlight_3, light.kitchen_downlight_4
+        effect: "Random (Fast)"
+police:
+  alias: Police Effect Testing
+  sequence:
+    - service: light.turn_on
       data:
-        entity_id:
-          - media_player.back_room
-        source: 'Ssion Radio'
-    - service: media_player.media_play
-      entity_id:
-        - media_player.back_room
-    - service: light.lifx_effect_colorloop
-      data:
-        entity_id:
-          - light.game_room_ceiling
-          - light.game_room_lamp
-        brightness: 100
-        period: 10
-        spread: 100
-        change: 100
+        entity_id: light.living_room_downlight_1, light.living_room_downlight_2, light.living_room_downlight_3, light.living_room_downlight_4, light.living_room_downlight_5, light.living_room_downlight_6, light.kitchen_downlight_1, light.kitchen_downlight_2, light.kitchen_downlight_3, light.kitchen_downlight_4
+        effect: "Strobe (Police)"

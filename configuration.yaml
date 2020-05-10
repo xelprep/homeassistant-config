@@ -228,8 +228,8 @@ light:
       - light.living_room_lamp
 
 # Enable Wink
-wink:
-  local_control: true
+#wink:
+#  local_control: true
 
 # Enable Device Tracking
 device_tracker:

@@ -1,0 +1,49 @@
+esphome:
+  name: bedroom_3_fan
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Bedroom 3 Fan"
+    password: !secret esphome_fallback_pw
+
+captive_portal:
+
+logger:
+
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO4
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Bedroom 3 Fan Button"
+    on_press:
+      - switch.toggle: relay
+
+switch:
+  - platform: gpio
+    id: led
+    pin:
+      number: GPIO12
+      inverted: true
+      
+  - platform: gpio
+    name: "Bedroom 3 Fan"
+    pin: GPIO14
+    id: relay
+
+    on_turn_on:
+      - switch.turn_on: led
+      
+    on_turn_off:
+      - switch.turn_off: led
