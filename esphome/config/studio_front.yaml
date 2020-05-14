@@ -1,0 +1,84 @@
+esphome:
+  name: studio_front
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Studio Front"
+    password: !secret esphome_fallback_pw
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+output:
+  - platform: esp8266_pwm
+    id: output_red
+    pin: GPIO5
+  - platform: esp8266_pwm
+    id: output_green
+    pin: GPIO4
+  - platform: esp8266_pwm
+    id: output_blue
+    pin: GPIO13
+  - platform: esp8266_pwm
+    id: output_cold_white
+    pin: GPIO14
+  - platform: esp8266_pwm
+    id: output_warm_white
+    pin: GPIO12
+
+light:
+  - platform: rgbww
+    name: "Studio Front"
+    red: output_red
+    green: output_green
+    blue: output_blue
+    default_transition_length: 1s
+    warm_white: output_warm_white
+    cold_white: output_cold_white
+    cold_white_color_temperature: 6000 K
+    warm_white_color_temperature: 2700 K
+    effects:
+      - random:
+      - random:
+          name: Random (Fast)
+          transition_length: 1s
+          update_interval: 1s
+      - strobe:
+      - strobe:
+          name: Strobe (Police)
+          colors:
+            - state: True
+              brightness: 100%
+              red: 100%
+              green: 0%
+              blue: 0%
+              white: 0%
+              duration: 250ms
+            - state: False
+              duration: 250ms
+            - state: True
+              brightness: 100%
+              red: 0%
+              green: 0%
+              blue: 100%
+              white: 0%
+              duration: 250ms
+      - flicker:
+      - flicker:
+          name: Flicker (Intense)
+          alpha: 80%
+          intensity: 5%
+      
