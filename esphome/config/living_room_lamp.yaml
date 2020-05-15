@@ -1,15 +1,15 @@
 esphome:
-  name: studio_front
+  name: living_room_lamp
   platform: ESP8266
   board: esp01_1m
 
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
-
+  
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Studio Front"
+    ssid: "Living Room Lamp"
     password: !secret esphome_fallback_pw
 
 captive_portal:
@@ -41,7 +41,7 @@ output:
 
 light:
   - platform: rgbww
-    name: "Studio Front"
+    name: "Living Room Lamp"
     red: output_red
     green: output_green
     blue: output_blue

@@ -156,5 +156,10 @@
       period: 30
       spread: 100
       transition: 10
-    entity_id: light.kitchen_overhead_lamp, light.living_room_lamp
+    entity_id: light.kitchen_overhead_lamp
     service: lifx.effect_colorloop
+  - service: homeassistant.turn_on
+    entity_id: light.living_room_lamp
+    data:
+      effect: "Random"
+      brightness: 127
