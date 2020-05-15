@@ -15,11 +15,11 @@
       state: off
     light.studio_overhead_lamp:
       state: off
-    light.studio_outlet_1:
+    switch.studio_outlet_1:
       state: off
-    light.studio_outlet_2:
+    switch.studio_outlet_2:
       state: off
-    light.studio_outlet_3:
+    switch.studio_outlet_3:
       state: off
     light.bedroom_3_ceiling:
       state: on
@@ -194,11 +194,11 @@
       state: on
       brightness: 254
       transition: 2
-    light.studio_outlet_1:
+    switch.studio_outlet_1:
       state: on
-    light.studio_outlet_2:
+    switch.studio_outlet_2:
       state: on
-    light.studio_outlet_3:
+    switch.studio_outlet_3:
       state: on
     light.bedroom_3_ceiling:
       state: on
@@ -319,11 +319,11 @@
       state: on
       brightness: 254
       transition: 2
-    light.studio_outlet_1:
+    switch.studio_outlet_1:
       state: on
-    light.studio_outlet_2:
+    switch.studio_outlet_2:
       state: on
-    light.studio_outlet_3:
+    switch.studio_outlet_3:
       state: on
     light.game_room_ceiling:
       state: on
