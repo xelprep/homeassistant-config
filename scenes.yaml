@@ -4,279 +4,327 @@
     alarm_control_panel.blink_bbh:
       state: armed_away
     light.bedroom_1_ceiling:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [55, 0, 8]
+      rgb_color:
+      - 55
+      - 0
+      - 8
       brightness: 127
       white_value: 0
     light.studio_front:
-      state: off
+      state: false
     light.studio_rear:
-      state: off
+      state: false
     light.studio_overhead_lamp:
-      state: off
+      state: false
     switch.studio_outlet_1:
-      state: off
+      state: false
     switch.studio_outlet_2:
-      state: off
+      state: false
     switch.studio_outlet_3:
-      state: off
+      state: false
     light.bedroom_3_ceiling:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [0, 160, 149]
+      rgb_color:
+      - 0
+      - 160
+      - 149
       brightness: 70
     light.bedroom_3_accent:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 42, 28]
+      rgb_color:
+      - 255
+      - 42
+      - 28
       brightness: 157
     light.bedroom_3_side_table_1:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 0, 200]
+      rgb_color:
+      - 255
+      - 0
+      - 200
       brightness: 38
       white_value: 0
     light.bedroom_3_side_table_2:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 0, 200]
+      rgb_color:
+      - 255
+      - 0
+      - 200
       brightness: 38
       white_value: 0
     switch.bedroom_3_fan:
-      state: on
+      state: true
     light.game_room_ceiling:
-      state: off
+      state: false
     light.game_room_lamp:
-      state: off
+      state: false
     light.front_hall_light:
-      state: on
+      state: true
       brightness: 2
     light.middle_hall_light:
-      state: off
+      state: false
     light.back_hall_light:
-      state: off
+      state: false
     light.laundry_room_downlight_1:
-      state: off
+      state: false
     light.laundry_room_downlight_2:
-      state: off
+      state: false
     light.kitchen_downlight_1:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [245, 25, 255]
+      rgb_color:
+      - 245
+      - 25
+      - 255
       brightness: 148
       white_value: 0
     light.kitchen_downlight_2:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 137, 6]
+      rgb_color:
+      - 255
+      - 137
+      - 6
       brightness: 127
       white_value: 64
     light.kitchen_downlight_3:
-      state: off
+      state: false
     light.kitchen_downlight_4:
-      state: off
+      state: false
     light.kitchen_overhead_lamp:
-      state: off
+      state: false
     light.living_room_downlight_1:
-      state: off
+      state: false
     light.living_room_downlight_2:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [59, 17, 255]
+      rgb_color:
+      - 59
+      - 17
+      - 255
       brightness: 124
       white_value: 0
     light.living_room_downlight_3:
-      state: off
+      state: false
     light.living_room_downlight_4:
-      state: off
+      state: false
     light.living_room_downlight_5:
-      state: off
+      state: false
     light.living_room_downlight_6:
-      state: off
+      state: false
     light.living_room_lamp:
-      state: off
+      state: false
     switch.backyard_lights:
-      state: off
+      state: false
 - id: purp
   name: Game Room Purple Diesel
   entities:
     light.game_room_ceiling:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [120, 0, 180]
+      rgb_color:
+      - 120
+      - 0
+      - 180
       brightness: 180
     light.game_room_lamp:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [120, 0, 180]
+      rgb_color:
+      - 120
+      - 0
+      - 180
       brightness: 180
 - id: chill
   name: Chill
   entities:
     light.game_room_ceiling:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [104, 0, 142]
+      rgb_color:
+      - 104
+      - 0
+      - 142
       brightness: 143
     light.game_room_lamp:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [19, 0, 250]
+      rgb_color:
+      - 19
+      - 0
+      - 250
       brightness: 250
 - id: halfchill
   name: Half Chill
   entities:
     light.game_room_ceiling:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [123, 110, 84]
+      rgb_color:
+      - 123
+      - 110
+      - 84
       brightness: 123
     light.game_room_lamp:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [163, 207, 255]
+      rgb_color:
+      - 163
+      - 207
+      - 255
       brightness: 255
 - id: nochill
   name: No Chill
   entities:
     light.game_room_ceiling:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 255, 255]
+      rgb_color:
+      - 255
+      - 255
+      - 255
       brightness: 255
     light.game_room_lamp:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 255, 255]
+      rgb_color:
+      - 255
+      - 255
+      - 255
       brightness: 255
 - id: cleaning
   name: Cleaning
   entities:
     light.back_hall_light:
-      state: on
+      state: true
       brightness: 254
       transition: 2
     light.front_hall_light:
-      state: on
+      state: true
       brightness: 254
       transition: 2
     light.middle_hall_light:
-      state: on
+      state: true
       brightness: 254
       transition: 2
     light.laundry_room_downlight_1:
-      state: on
+      state: true
       transition: 2
       color_temp: 250
       brightness: 255
     light.laundry_room_downlight_2:
-      state: on
+      state: true
       transition: 2
       color_temp: 250
       brightness: 255
     light.bedroom_1_ceiling:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.studio_front:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.studio_rear:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.studio_overhead_lamp:
-      state: on
+      state: true
       brightness: 254
       transition: 2
     switch.studio_outlet_1:
-      state: on
+      state: true
     switch.studio_outlet_2:
-      state: on
+      state: true
     switch.studio_outlet_3:
-      state: on
+      state: true
     light.bedroom_3_ceiling:
-      state: on
+      state: true
       transition: 2
       color_temp: 250
       brightness: 255
     light.bedroom_3_accent:
-      state: on
+      state: true
       transition: 2
       color_temp: 250
       brightness: 255
     light.game_room_ceiling:
-      state: on
+      state: true
       transition: 2
       color_temp: 250
       brightness: 255
     light.game_room_lamp:
-      state: on
+      state: true
       transition: 2
       color_temp: 250
       brightness: 255
     light.kitchen_downlight_1:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.kitchen_downlight_2:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.kitchen_downlight_3:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.kitchen_downlight_4:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.kitchen_overhead_lamp:
-      state: on
+      state: true
       transition: 2
       color_temp: 250
       brightness: 255
     light.living_room_downlight_1:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.living_room_downlight_2:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.living_room_downlight_3:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.living_room_downlight_4:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.living_room_downlight_5:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.living_room_downlight_6:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
     light.living_room_lamp:
-      state: on
+      state: true
       transition: 2
       brightness: 1
       white_value: 255
@@ -284,430 +332,829 @@
   name: Daytime
   entities:
     alarm_control_panel.blink_bbh:
-      state: disarmed
-    light.bedroom_1_ceiling:
-      state: on
-      transition: 2
-      brightness: 255
-      rgb_color: [255, 190, 0]
-      white_value: 255
+      friendly_name: blink BBH
+      icon: mdi:security
+      restored: true
+      state: unavailable
+      supported_features: 2
     light.back_hall_light:
-      state: on
-      brightness: 2
-      transition: 2
+      attribution: Data provided by goabode.com
+      battery_low: false
+      brightness: 3
+      device_id: ZB:d90e0a
+      device_type: Dimmer
+      friendly_name: Back Hall Light
+      no_response: false
+      state: 'on'
+      supported_features: 1
+    light.bedroom_1_ceiling:
+      brightness: 255
+      color_temp: 1
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Bedroom 1 Ceiling
+      hs_color:
+      - 44.706
+      - 100
+      max_mireds: 370.370361328125
+      min_mireds: 166.6666717529297
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 191
+      white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.front_hall_light:
-      state: on
-      brightness: 2
-      transition: 2
-    light.middle_hall_light:
-      state: on
-      brightness: 2
-      transition: 2
-    light.studio_front:
-      state: on
-      transition: 2
-      brightness: 255
-      rgb_color: [255, 190, 0]
-      white_value: 255
-    light.studio_rear:
-      state: on
-      transition: 2
-      brightness: 255
-      rgb_color: [255, 190, 0]
-      white_value: 255
-    light.studio_overhead_lamp:
-      state: on
-      brightness: 254
-      transition: 2
-    switch.studio_outlet_1:
-      state: on
-    switch.studio_outlet_2:
-      state: on
-    switch.studio_outlet_3:
-      state: on
+      attribution: Data provided by goabode.com
+      battery_low: false
+      brightness: 3
+      device_id: ZB:9fe10a
+      device_type: Dimmer
+      friendly_name: Front Hall Light
+      no_response: false
+      state: 'on'
+      supported_features: 1
     light.game_room_ceiling:
-      state: on
-      transition: 2
-      color_temp: 353
       brightness: 255
+      color_temp: 353
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: Game Room Ceiling
+      max_mireds: 400
+      min_mireds: 111
+      state: 'on'
+      supported_features: 55
     light.game_room_lamp:
-      state: on
-      transition: 2
-      color_temp: 353
       brightness: 255
+      color_temp: 353
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: Game Room Lamp
+      max_mireds: 400
+      min_mireds: 111
+      state: 'on'
+      supported_features: 55
     light.kitchen_downlight_1:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Kitchen Downlight 1
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.kitchen_downlight_2:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Kitchen Downlight 2
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.kitchen_downlight_3:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Kitchen Downlight 3
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.kitchen_downlight_4:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Kitchen Downlight 4
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.kitchen_overhead_lamp:
-      state: on
-      transition: 2
+      brightness: 255
       color_temp: 353
-      brightness: 255
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: Kitchen Overhead Lamp
+      max_mireds: 400
+      min_mireds: 111
+      state: 'on'
+      supported_features: 55
     light.living_room_downlight_1:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Living Room Downlight 1
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.living_room_downlight_2:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Living Room Downlight 2
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.living_room_downlight_3:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Living Room Downlight 3
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.living_room_downlight_4:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Living Room Downlight 4
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.living_room_downlight_5:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Living Room Downlight 5
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.living_room_downlight_6:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Living Room Downlight 6
+      hs_color:
+      - 44.706
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 189
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
     light.living_room_lamp:
-      state: on
-      transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      color_temp: 1
+      effect: None
+      effect_list:
+      - None
+      - Random
+      - Random (Fast)
+      - Strobe
+      - Strobe (Police)
+      - Flicker
+      - Flicker (Intense)
+      friendly_name: Living Room Lamp
+      hs_color:
+      - 44.706
+      - 100
+      max_mireds: 370.370361328125
+      min_mireds: 166.6666717529297
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 191
       white_value: 255
+      xy_color:
+      - 0.528
+      - 0.446
+    light.middle_hall_light:
+      attribution: Data provided by goabode.com
+      battery_low: false
+      brightness: 3
+      device_id: ZB:32db0a
+      device_type: Dimmer
+      friendly_name: Middle Hall Light
+      no_response: false
+      state: 'on'
+      supported_features: 1
+    light.studio_front:
+      brightness: 255
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: Studio Front
+      hs_color:
+      - 44.704
+      - 100
+      max_mireds: 400
+      min_mireds: 111
+      rgb_color:
+      - 255
+      - 189
+      - 0
+      state: 'on'
+      supported_features: 55
+      xy_color:
+      - 0.529
+      - 0.444
+    light.studio_rear:
+      brightness: 255
+      effect_list:
+      - effect_colorloop
+      - effect_pulse
+      - effect_stop
+      friendly_name: Studio Rear
+      hs_color:
+      - 44.704
+      - 100
+      max_mireds: 400
+      min_mireds: 111
+      rgb_color:
+      - 255
+      - 189
+      - 0
+      state: 'on'
+      supported_features: 55
+      xy_color:
+      - 0.529
+      - 0.444
 - id: entertaining
   name: Entertaining At Night
   entities:
     light.back_hall_light:
-      state: on
+      state: true
       brightness: 2
       transition: 2
     light.front_hall_light:
-      state: on
+      state: true
       brightness: 2
       transition: 2
     light.middle_hall_light:
-      state: on
+      state: true
       brightness: 2
       transition: 2
     light.kitchen_downlight_1:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.kitchen_downlight_2:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 155
       white_value: 59
     light.kitchen_downlight_3:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 155
       white_value: 59
     light.kitchen_downlight_4:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 155
       white_value: 59
     light.living_room_downlight_1:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.living_room_downlight_2:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 155
       white_value: 59
     light.living_room_downlight_3:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.living_room_downlight_4:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 155
       white_value: 59
     light.living_room_downlight_5:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 155
       white_value: 59
     light.living_room_downlight_6:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 155
       white_value: 59
     switch.kitchen_party_light:
-      state: on
+      state: true
 - id: working
   name: Working At Night
   entities:
     light.back_hall_light:
-      state: on
+      state: true
       brightness: 2
       transition: 2
     light.front_hall_light:
-      state: on
+      state: true
       brightness: 2
       transition: 2
     light.middle_hall_light:
-      state: on
+      state: true
       brightness: 2
       transition: 2
     light.kitchen_downlight_1:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.kitchen_downlight_2:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.kitchen_downlight_3:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.kitchen_downlight_4:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.kitchen_overhead_lamp:
-      state: on
+      state: true
       transition: 2
       color_temp: 354
       brightness: 255
     light.living_room_downlight_1:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.living_room_downlight_2:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.living_room_downlight_3:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.living_room_downlight_4:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.living_room_downlight_5:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.living_room_downlight_6:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
     light.living_room_lamp:
-      state: on
+      state: true
       transition: 2
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 255
       white_value: 111
 - id: morning
   name: Morning Light
   entities:
     light.bedroom_1_ceiling:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.studio_front:
-      state: on
+      state: true
       transition: 3600
       color_temp: 236
       brightness: 255
     light.studio_rear:
-      state: on
+      state: true
       transition: 3600
       color_temp: 236
       brightness: 255
     light.bedroom_3_ceiling:
-      state: on
+      state: true
       transition: 3600
       color_temp: 236
       brightness: 255
     light.bedroom_3_accent:
-      state: on
+      state: true
       transition: 3600
       color_temp: 236
       brightness: 255
     light.bedroom_3_side_table_1:
-      state: on
+      state: true
       transition: 3600
       color_temp: 236
       brightness: 255
     light.bedroom_3_side_table_2:
-      state: on
+      state: true
       transition: 3600
       color_temp: 236
       brightness: 255
     light.game_room_ceiling:
-      state: on
+      state: true
       transition: 3600
       color_temp: 236
       brightness: 100
     light.game_room_lamp:
-      state: on
+      state: true
       transition: 3600
       color_temp: 236
       brightness: 100
     light.kitchen_downlight_1:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.kitchen_downlight_2:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.kitchen_downlight_3:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.kitchen_downlight_4:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.kitchen_overhead_lamp:
-      state: on
+      state: true
       transition: 3600
       color_temp: 236
       brightness: 255
     light.living_room_downlight_1:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.living_room_downlight_2:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.living_room_downlight_3:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.living_room_downlight_4:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.living_room_downlight_5:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.living_room_downlight_6:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
     light.living_room_lamp:
-      state: on
+      state: true
       transition: 3600
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       brightness: 103
       white_value: 156
 - id: room1
   name: Room 1
   entities:
     light.bedroom_1_ceiling:
-      state: on
+      state: true
       transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       white_value: 255
 - id: room2
   name: Room 2
   entities:
     light.studio_front:
-      state: on
+      state: true
       transition: 2
       color_temp: 294
       brightness: 255
     light.studio_rear:
-      state: on
+      state: true
       transition: 2
       color_temp: 294
       brightness: 255
@@ -715,37 +1162,43 @@
   name: Room 3
   entities:
     light.bedroom_3_ceiling:
-      state: on
+      state: true
       transition: 2
       color_temp: 294
       brightness: 255
     light.bedroom_3_accent:
-      state: on
+      state: true
       transition: 2
       color_temp: 294
       brightness: 255
     light.bedroom_3_side_table_1:
-      state: on
+      state: true
       transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       white_value: 255
     light.bedroom_3_side_table_2:
-      state: on
+      state: true
       transition: 2
       brightness: 255
-      rgb_color: [255, 190, 0]
+      rgb_color:
+      - 255
+      - 190
+      - 0
       white_value: 255
 - id: laundry
   name: Laundry
   entities:
     light.laundry_room_downlight_1:
-      state: on
+      state: true
       transition: 2
       color_temp: 294
       brightness: 255
     light.laundry_room_downlight_2:
-      state: on
+      state: true
       transition: 2
       color_temp: 294
       brightness: 255

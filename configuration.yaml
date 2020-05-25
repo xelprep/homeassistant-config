@@ -256,6 +256,13 @@ device_tracker:
       lifx5: !secret lifx5_ip
       lifx6: !secret lifx6_ip
 
+# Enable Ecovacs
+ecovacs:
+  username: !secret ecovacs_username
+  password: !secret ecovacs_password
+  country: us
+  continent: na
+
 # Define Scenes
 scene: !include scenes.yaml
 

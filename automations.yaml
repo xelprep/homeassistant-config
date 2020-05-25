@@ -111,14 +111,14 @@
     entity_id: switch.bedroom_3_fan
 - id: s3tth3m3
   alias: Automation for Theme HA Restart
-  initial_state: true
   trigger:
-  - platform: homeassistant
-    event: start
+  - event: start
+    platform: homeassistant
   action:
+  - data:
+      name: night
     service: frontend.set_theme
-    data:
-      name: midnight
+  initial_state: true
 - id: abode_and_blink_armed
   alias: Blink Arms With Abode
   trigger:
@@ -161,5 +161,5 @@
   - service: homeassistant.turn_on
     entity_id: light.living_room_lamp
     data:
-      effect: "Random"
+      effect: Random
       brightness: 127
