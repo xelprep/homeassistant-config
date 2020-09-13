@@ -22,34 +22,34 @@ api:
 
 ota:
 
-my9231:
-  data_pin: GPIO13
-  clock_pin: GPIO15
-  num_channels: 4
-  num_chips: 1
-
 output:
-  - platform: my9231
+  - platform: esp8266_pwm
+    pin: 14
     id: output_blue
-    channel: 1
-  - platform: my9231
-    id: output_red
-    channel: 3
-  - platform: my9231
+  - platform: esp8266_pwm
+    pin: 12
     id: output_green
-    channel: 2
-  - platform: my9231
-    id: output_white
-    channel: 0
+  - platform: esp8266_pwm
+    pin: 4
+    id: output_red
+  - platform: esp8266_pwm
+    pin: 5
+    id: output_coldwhite
+  - platform: esp8266_pwm
+    pin: 13
+    id: output_warmwhite
 
 light:
-  - platform: rgbw
+  - platform: rgbww
     name: living_room_downlight_2
-    restore_mode: RESTORE_DEFAULT_ON
+    default_transition_length: 0s
     red: output_red
     green: output_green
     blue: output_blue
-    white: output_white
+    cold_white: output_coldwhite
+    warm_white: output_warmwhite
+    cold_white_color_temperature: 6500 K
+    warm_white_color_temperature: 2700 K
     effects:
       - random:
       - random:
@@ -81,4 +81,4 @@ light:
           name: Flicker (Intense)
           alpha: 80%
           intensity: 5%
-      
+    
