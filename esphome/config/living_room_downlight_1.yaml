@@ -50,6 +50,7 @@ light:
     green: output_green
     blue: output_blue
     white: output_white
+    color_interlock: true
     effects:
       - random:
       - random:

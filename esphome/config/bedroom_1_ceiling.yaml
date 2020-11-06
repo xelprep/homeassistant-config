@@ -45,11 +45,11 @@ light:
     red: output_red
     green: output_green
     blue: output_blue
-    default_transition_length: 1s
     warm_white: output_warm_white
     cold_white: output_cold_white
     cold_white_color_temperature: 6000 K
     warm_white_color_temperature: 2700 K
+    color_interlock: true
     effects:
       - random:
       - random:

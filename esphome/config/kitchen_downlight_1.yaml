@@ -42,7 +42,6 @@ output:
 light:
   - platform: rgbww
     name: kitchen_downlight_1
-    default_transition_length: 0s
     red: output_red
     green: output_green
     blue: output_blue
@@ -50,6 +49,7 @@ light:
     warm_white: output_warmwhite
     cold_white_color_temperature: 6500 K
     warm_white_color_temperature: 2700 K
+    color_interlock: true
     effects:
       - random:
       - random:
