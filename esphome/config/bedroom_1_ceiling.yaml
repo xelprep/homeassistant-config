@@ -22,22 +22,28 @@ api:
 
 ota:
 
+sm16716:
+  data_pin: GPIO4
+  clock_pin: GPIO5
+  num_channels: 5
+  num_chips: 1
+
 output:
-  - platform: esp8266_pwm
+  - platform: sm16716
     id: output_red
-    pin: GPIO5
-  - platform: esp8266_pwm
+    channel: 0
+  - platform: sm16716
     id: output_green
-    pin: GPIO4
-  - platform: esp8266_pwm
+    channel: 1
+  - platform: sm16716
     id: output_blue
-    pin: GPIO13
-  - platform: esp8266_pwm
-    id: output_cold_white
-    pin: GPIO14
-  - platform: esp8266_pwm
+    channel: 2
+  - platform: sm16716
     id: output_warm_white
-    pin: GPIO12
+    channel: 3
+  - platform: sm16716
+    id: output_cold_white
+    channel: 4
 
 light:
   - platform: rgbww
