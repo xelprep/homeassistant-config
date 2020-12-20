@@ -247,8 +247,9 @@
       brightness: 255
     light.studio_overhead_lamp:
       state: true
-      brightness: 254
       transition: 2
+      color_temp: 250
+      brightness: 255
     switch.studio_outlet_1:
       state: true
     switch.studio_outlet_2:
@@ -801,6 +802,17 @@
       transition: 2
       color_temp: 294
       brightness: 255
+    light.studio_overhead_lamp:
+      state: true
+      transition: 2
+      color_temp: 294
+      brightness: 255
+    switch.studio_outlet_1:
+      state: true
+    switch.studio_outlet_2:
+      state: true
+    switch.studio_outlet_3:
+      state: true
 - id: room3
   name: Room 3
   entities:
