@@ -99,6 +99,8 @@
       state: false
     light.kitchen_overhead_lamp:
       state: false
+    switch.kitchen_party_light:
+      state: false
     light.living_room_downlight_1:
       state: false
     light.living_room_downlight_2:
@@ -121,6 +123,8 @@
     light.living_room_lamp:
       state: false
     switch.backyard_lights:
+      state: false
+    switch.garage_lights:
       state: false
 - id: purp
   name: Game Room Purple Diesel
@@ -204,14 +208,17 @@
     light.back_hall_light:
       state: true
       brightness: 254
+      color_temp: 250
       transition: 2
     light.front_hall_light:
       state: true
       brightness: 254
+      color_temp: 250
       transition: 2
     light.middle_hall_light:
       state: true
       brightness: 254
+      color_temp: 250
       transition: 2
     light.laundry_room_downlight_1:
       state: true
@@ -231,13 +238,13 @@
     light.studio_front:
       state: true
       transition: 2
-      brightness: 1
-      white_value: 255
+      color_temp: 250
+      brightness: 255
     light.studio_rear:
       state: true
       transition: 2
-      brightness: 1
-      white_value: 255
+      color_temp: 250
+      brightness: 255
     light.studio_overhead_lamp:
       state: true
       brightness: 254
@@ -271,22 +278,22 @@
     light.kitchen_downlight_1:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.kitchen_downlight_2:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.kitchen_downlight_3:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.kitchen_downlight_4:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.kitchen_overhead_lamp:
       state: true
@@ -296,461 +303,123 @@
     light.living_room_downlight_1:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.living_room_downlight_2:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.living_room_downlight_3:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.living_room_downlight_4:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.living_room_downlight_5:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.living_room_downlight_6:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
     light.living_room_lamp:
       state: true
       transition: 2
-      brightness: 1
+      brightness: 255
       white_value: 255
 - id: daytime
   name: Daytime
   entities:
     alarm_control_panel.blink_bbh:
-      friendly_name: blink BBH
-      icon: mdi:security
-      restored: true
-      state: unavailable
-      supported_features: 2
+      state: disarmed
     light.back_hall_light:
-      attribution: Data provided by goabode.com
-      battery_low: false
       brightness: 3
-      device_id: ZB:d90e0a
-      device_type: Dimmer
-      friendly_name: Back Hall Light
-      no_response: false
-      state: 'on'
-      supported_features: 1
+      state: true
+      white_value: 255
     light.bedroom_1_ceiling:
       brightness: 255
-      color_temp: 1
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Bedroom 1 Ceiling
-      hs_color:
-      - 44.706
-      - 100
-      max_mireds: 370.370361328125
-      min_mireds: 166.6666717529297
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 191
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.front_hall_light:
-      attribution: Data provided by goabode.com
-      battery_low: false
       brightness: 3
-      device_id: ZB:9fe10a
-      device_type: Dimmer
-      friendly_name: Front Hall Light
-      no_response: false
-      state: 'on'
-      supported_features: 1
+      state: true
+      white_value: 255
     light.game_room_ceiling:
       brightness: 255
       color_temp: 353
-      effect_list:
-      - effect_colorloop
-      - effect_pulse
-      - effect_stop
-      friendly_name: Game Room Ceiling
-      max_mireds: 400
-      min_mireds: 111
-      state: 'on'
-      supported_features: 55
+      state: true
     light.game_room_lamp:
       brightness: 255
       color_temp: 353
-      effect_list:
-      - effect_colorloop
-      - effect_pulse
-      - effect_stop
-      friendly_name: Game Room Lamp
-      max_mireds: 400
-      min_mireds: 111
-      state: 'on'
-      supported_features: 55
+      state: true
     light.kitchen_downlight_1:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Kitchen Downlight 1
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.kitchen_downlight_2:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Kitchen Downlight 2
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.kitchen_downlight_3:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Kitchen Downlight 3
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.kitchen_downlight_4:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Kitchen Downlight 4
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.kitchen_overhead_lamp:
       brightness: 255
-      color_temp: 353
-      effect_list:
-      - effect_colorloop
-      - effect_pulse
-      - effect_stop
-      friendly_name: Kitchen Overhead Lamp
-      max_mireds: 400
-      min_mireds: 111
-      state: 'on'
-      supported_features: 55
+      state: true
+      white_value: 255
     light.living_room_downlight_1:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Living Room Downlight 1
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.living_room_downlight_2:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Living Room Downlight 2
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.living_room_downlight_3:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Living Room Downlight 3
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.living_room_downlight_4:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Living Room Downlight 4
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.living_room_downlight_5:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Living Room Downlight 5
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.living_room_downlight_6:
       brightness: 255
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Living Room Downlight 6
-      hs_color:
-      - 44.706
-      - 100
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 189
+      state: true
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.living_room_lamp:
+      state: true
       brightness: 255
-      color_temp: 1
-      effect: None
-      effect_list:
-      - None
-      - Random
-      - Random (Fast)
-      - Strobe
-      - Strobe (Police)
-      - Flicker
-      - Flicker (Intense)
-      friendly_name: Living Room Lamp
-      hs_color:
-      - 44.706
-      - 100
-      max_mireds: 370.370361328125
-      min_mireds: 166.6666717529297
-      rgb_color:
-      - 255
-      - 190
-      - 0
-      state: 'on'
-      supported_features: 191
       white_value: 255
-      xy_color:
-      - 0.528
-      - 0.446
     light.middle_hall_light:
-      attribution: Data provided by goabode.com
-      battery_low: false
       brightness: 3
-      device_id: ZB:32db0a
-      device_type: Dimmer
-      friendly_name: Middle Hall Light
-      no_response: false
-      state: 'on'
-      supported_features: 1
+      state: true
+      white_value: 255
     light.studio_front:
       brightness: 255
-      effect_list:
-      - effect_colorloop
-      - effect_pulse
-      - effect_stop
-      friendly_name: Studio Front
-      hs_color:
-      - 44.704
-      - 100
-      max_mireds: 400
-      min_mireds: 111
-      rgb_color:
-      - 255
-      - 189
-      - 0
-      state: 'on'
-      supported_features: 55
-      xy_color:
-      - 0.529
-      - 0.444
+      color_temp: 353
+      state: true
     light.studio_rear:
       brightness: 255
-      effect_list:
-      - effect_colorloop
-      - effect_pulse
-      - effect_stop
-      friendly_name: Studio Rear
-      hs_color:
-      - 44.704
-      - 100
-      max_mireds: 400
-      min_mireds: 111
-      rgb_color:
-      - 255
-      - 189
-      - 0
-      state: 'on'
-      supported_features: 55
-      xy_color:
-      - 0.529
-      - 0.444
+      color_temp: 353
+      state: true
 - id: entertaining
   name: Entertaining At Night
   entities:
@@ -758,104 +427,93 @@
       state: true
       brightness: 2
       transition: 2
+      hs_color:
+      - 44.795
+      - 57.255
     light.front_hall_light:
       state: true
       brightness: 2
       transition: 2
+      hs_color:
+      - 44.795
+      - 57.255
     light.middle_hall_light:
       state: true
       brightness: 2
       transition: 2
+      hs_color:
+      - 44.795
+      - 57.255
     light.kitchen_downlight_1:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 255
-      white_value: 111
+      hs_color:
+      - 44.795
+      - 57.255
     light.kitchen_downlight_2:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 155
-      white_value: 59
+      hs_color:
+      - 44.795
+      - 57.255
     light.kitchen_downlight_3:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 155
-      white_value: 59
+      hs_color:
+      - 44.795
+      - 57.255
     light.kitchen_downlight_4:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 155
-      white_value: 59
+      hs_color:
+      - 44.795
+      - 57.255
     light.living_room_downlight_1:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 255
-      white_value: 111
+      hs_color:
+      - 44.795
+      - 57.255
     light.living_room_downlight_2:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 155
-      white_value: 59
+      hs_color:
+      - 44.795
+      - 57.255
     light.living_room_downlight_3:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 255
-      white_value: 111
+      hs_color:
+      - 44.795
+      - 57.255
     light.living_room_downlight_4:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 155
-      white_value: 59
+      hs_color:
+      - 44.795
+      - 57.255
     light.living_room_downlight_5:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 155
-      white_value: 59
+      hs_color:
+      - 44.795
+      - 57.255
     light.living_room_downlight_6:
       state: true
       transition: 2
-      rgb_color:
-      - 255
-      - 190
-      - 0
       brightness: 155
-      white_value: 59
+      hs_color:
+      - 44.795
+      - 57.255
     switch.kitchen_party_light:
       state: true
 - id: working
@@ -863,13 +521,13 @@
   entities:
     light.back_hall_light:
       brightness: 3
-      state: 'on'
+      state: true
     light.front_hall_light:
       brightness: 3
-      state: 'on'
+      state: true
     light.middle_hall_light:
       brightness: 3
-      state: 'on'
+      state: true
     light.kitchen_downlight_1:
       brightness: 255
       color_temp: 1
@@ -877,7 +535,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.kitchen_downlight_2:
       brightness: 255
       color_temp: 1
@@ -885,7 +543,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.kitchen_downlight_3:
       brightness: 255
       color_temp: 1
@@ -893,7 +551,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.kitchen_downlight_4:
       brightness: 255
       color_temp: 1
@@ -901,11 +559,11 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.kitchen_overhead_lamp:
       brightness: 255
       color_temp: 354
-      state: 'on'
+      state: true
     light.living_room_downlight_1:
       brightness: 255
       color_temp: 1
@@ -913,7 +571,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.living_room_downlight_2:
       brightness: 255
       color_temp: 1
@@ -921,7 +579,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.living_room_downlight_3:
       brightness: 255
       color_temp: 1
@@ -929,7 +587,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.living_room_downlight_4:
       brightness: 255
       color_temp: 1
@@ -937,7 +595,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.living_room_downlight_5:
       brightness: 255
       color_temp: 1
@@ -945,7 +603,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.living_room_downlight_6:
       brightness: 255
       color_temp: 1
@@ -953,7 +611,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
     light.living_room_lamp:
       brightness: 255
       color_temp: 1
@@ -961,7 +619,7 @@
       - 44.795
       - 57.255
       white_value: 0
-      state: 'on'
+      state: true
 - id: morning
   name: Morning Light
   entities:
