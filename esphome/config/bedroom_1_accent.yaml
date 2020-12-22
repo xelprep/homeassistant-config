@@ -1,5 +1,5 @@
 esphome:
-  name: bedroom_1_ceiling
+  name: bedroom_1_accent
   platform: ESP8266
   board: esp01_1m
 
@@ -9,7 +9,7 @@ wifi:
     
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Bedroom 1 Ceiling"
+    ssid: "Bedroom 1 Accent"
     password: !secret esphome_fallback_pw
 
 captive_portal:
@@ -41,7 +41,7 @@ output:
 
 light:
   - platform: rgbww
-    name: bedroom_1_ceiling
+    name: bedroom_1_accent
     red: output_red
     green: output_green
     blue: output_blue
