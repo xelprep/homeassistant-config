@@ -39,6 +39,7 @@ output:
     pin: 13
     id: output_warmwhite
 
+
 light:
   - platform: rgbww
     name: bedroom_1_lamp
@@ -50,6 +51,7 @@ light:
     cold_white_color_temperature: 6000 K
     warm_white_color_temperature: 3000 K
     color_interlock: true
+    constant_brightness: true
     effects:
       - random:
       - random:

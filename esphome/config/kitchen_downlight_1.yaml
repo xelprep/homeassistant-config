@@ -50,6 +50,7 @@ light:
     cold_white_color_temperature: 6500 K
     warm_white_color_temperature: 2700 K
     color_interlock: true
+    constant_brightness: true
     effects:
       - random:
       - random:
