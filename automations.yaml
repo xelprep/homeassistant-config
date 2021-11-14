@@ -1,8 +1,8 @@
 - id: m0rninglight
   alias: Turn On Morning light
   trigger:
-    platform: time
-    at: 07:30:00
+  - platform: time
+    at: 09:00:00
   condition:
   - condition: time
     weekday:
@@ -14,17 +14,17 @@
   action:
   - service: homeassistant.turn_on
     entity_id: scene.morning_light
+  mode: single
 - id: sund0wn
   alias: Sundown Patio
   trigger:
-    platform: sun
+  - platform: sun
     event: sunset
     offset: -01:00:00
   action:
   - service: homeassistant.turn_on
     entity_id: switch.rear_patio_lights
-  - service: homeassistant.turn_on
-    entity_id: scene.working_at_night
+  mode: single
 - id: sunup
   alias: Sunup Patio
   trigger:

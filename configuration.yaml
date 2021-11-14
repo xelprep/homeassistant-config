@@ -34,6 +34,9 @@ recorder:
 
 # API password
 http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - !secret trustedproxy
 
 # Enable api
 api:
