@@ -44,16 +44,16 @@ api:
 # Enable Alexa Smart Home
 alexa:
   smart_home:
+    locale: en-US
     endpoint: https://api.amazonalexa.com/v3/events
     client_id: !secret alexa_client_id
     client_secret: !secret alexa_client_secret
     filter:
       exclude_entities:
         - media_player.studio
-
-# Check for available updates
-updater:
-  include_used_components: true
+        - media_player.garage
+        - media_player.front_room
+        - media_player.back_room
 
 # Discover some devices automatically
 discovery:
@@ -101,12 +101,12 @@ blink:
 #       - 'online'
 
 # Enable OctoPrint
-octoprint:
-  host: !secret octoprint_server
-  api_key: !secret octoprint_api
-  name: ENDER_5
-  bed: true
-  number_of_tools: 1
+#octoprint:
+#  host: !secret octoprint_server
+#  api_key: !secret octoprint_api
+#  name: ENDER_5
+#  bed: true
+#  number_of_tools: 1
 
 # Enable Sensors
 sensor:
@@ -150,14 +150,6 @@ notify:
     recipient:
       - !secret alert_recipient
     sender_name: Home Assistant
-
-# Enable Sonos
-sonos:
-  media_player:
-    hosts:
-      - !secret sonos1
-      - !secret sonos2
-      - !secret sonos3
 
 # Enable Google Assistant Integration
 google_assistant:
@@ -256,13 +248,6 @@ device_tracker:
       lifx4: !secret lifx4_ip
       lifx5: !secret lifx5_ip
       lifx6: !secret lifx6_ip
-
-# Enable Ecovacs
-ecovacs:
-  username: !secret ecovacs_username
-  password: !secret ecovacs_password
-  country: us
-  continent: na
 
 # Define Scenes
 scene: !include scenes.yaml

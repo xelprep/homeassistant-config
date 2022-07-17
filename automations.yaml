@@ -11,6 +11,8 @@
     - wed
     - thu
     - fri
+    before: 00:00:00
+    after: 00:00:00
   action:
   - service: homeassistant.turn_on
     entity_id: scene.morning_light
@@ -116,7 +118,7 @@
     platform: homeassistant
   action:
   - data:
-      name: night
+      name: grey_night
     service: frontend.set_theme
   initial_state: true
 - id: abode_and_blink_armed

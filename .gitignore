@@ -1,5 +1,5 @@
 abodepy_cache.pickle
-home-assistant.log
+home-assistant.log*
 home-assistant_v2.db*
 .ios.conf
 *DS_Store
@@ -14,7 +14,7 @@ tts
 .wink.conf
 emulated_hue_ids.json
 known_devices.yaml
-custom_components
+#custom_components
 *.pickle
 service_account.json
 esphome/config/*
