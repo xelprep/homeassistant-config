@@ -1,3 +1,6 @@
 [submodule "themes/grey-night"]
 	path = themes/grey-night
 	url = https://github.com/home-assistant-community-themes/grey-night.git
+[submodule "submodules/localtuya"]
+	path = submodules/localtuya
+	url = https://github.com/rospogrigio/localtuya.git
