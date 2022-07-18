@@ -67,6 +67,7 @@
     light.front_hall_light:
       state: true
       brightness: 2
+      color_temp: 369
     light.middle_hall_light:
       state: false
     light.back_hall_light:
@@ -344,15 +345,27 @@
     light.back_hall_light:
       brightness: 3
       state: true
-      white_value: 255
+      color_temp: 333
     light.bedroom_1_ceiling:
       brightness: 255
       state: true
-      white_value: 255
+      color_temp: 333
+    light.bedroom_1_lamp:
+      brightness: 255
+      state: true
+      color_temp: 333
+    light.bedroom_1_accent:
+      brightness: 255
+      state: true
+      color_temp: 333
+    light.billy_s_desk_lamp:
+      brightness: 255
+      state: true
+      color_temp: 333
     light.front_hall_light:
       brightness: 3
       state: true
-      white_value: 255
+      color_temp: 333
     light.game_room_ceiling:
       brightness: 255
       color_temp: 353
@@ -364,31 +377,31 @@
     light.kitchen_downlight_1:
       brightness: 255
       state: true
-      white_value: 255
+      color_temp: 333
     light.kitchen_downlight_2:
       brightness: 255
       state: true
-      white_value: 255
+      color_temp: 333
     light.kitchen_downlight_3:
       brightness: 255
       state: true
-      white_value: 255
+      color_temp: 333
     light.kitchen_downlight_4:
       brightness: 255
       state: true
-      white_value: 255
+      color_temp: 333
     light.kitchen_overhead_lamp:
       brightness: 255
       state: true
-      white_value: 255
+      color_temp: 333
     light.living_room_downlight_1:
       brightness: 255
       state: true
-      white_value: 255
+      rgb_color: [255, 223, 128]
     light.living_room_downlight_2:
       brightness: 255
       state: true
-      white_value: 255
+      color_temp: 333
     light.living_room_downlight_3:
       brightness: 255
       state: true
@@ -396,7 +409,7 @@
     light.living_room_downlight_4:
       brightness: 255
       state: true
-      white_value: 255
+      color_temp: 333
     light.living_room_downlight_5:
       brightness: 255
       state: true
@@ -404,15 +417,15 @@
     light.living_room_downlight_6:
       brightness: 255
       state: true
-      white_value: 255
+      color_temp: 333
     light.living_room_lamp:
       state: true
       brightness: 255
-      white_value: 255
+      color_temp: 333
     light.middle_hall_light:
       brightness: 3
       state: true
-      white_value: 255
+      color_temp: 333
     light.studio_front:
       brightness: 255
       color_temp: 353
@@ -420,6 +433,12 @@
     light.studio_rear:
       brightness: 255
       color_temp: 353
+      state: true
+    light.studio_overhead_lamp:
+      brightness: 255
+      color_temp: 353
+      state: true
+    switch.kitchen_party_light:
       state: true
 - id: entertaining
   name: Entertaining At Night
