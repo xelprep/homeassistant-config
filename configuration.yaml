@@ -3,6 +3,7 @@ homeassistant:
   latitude: !secret latitude
   longitude: !secret longitude
   elevation: 32
+  currency: USD
   unit_system: imperial
   time_zone: America/Los_Angeles
   customize: !include customize.yaml
@@ -24,10 +25,6 @@ config:
 
 # Enable iOS app
 mobile_app:
-
-# Enable MQTT
-# mqtt:
-#   password: !secret mqtt_password
 
 # Enable support for tracking state changes over time.
 recorder:
@@ -86,27 +83,6 @@ camera:
 blink:
   username: !secret blink_username
   password: !secret blink_password
-
-# Enable Nest
-# nest:
-#   client_id: !secret nest_client_id
-#   client_secret: !secret nest_client_secret
-#   sensors:
-#     monitored_conditions:
-#       - 'co_status'
-#       - 'smoke_status'
-#       - 'battery_health'
-#   binary_sensors:
-#     monitored_conditions:
-#       - 'online'
-
-# Enable OctoPrint
-#octoprint:
-#  host: !secret octoprint_server
-#  api_key: !secret octoprint_api
-#  name: ENDER_5
-#  bed: true
-#  number_of_tools: 1
 
 # Enable Sensors
 sensor:
